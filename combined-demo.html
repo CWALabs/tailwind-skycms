@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Combined Bundle Demo</title>
+  
+  <!-- SINGLE FILE: Tailwind JS + Config combined -->
+  <script src="/tailwind-bundle.js"></script>
+</head>
+<body class="bg-gray-50">
+  
+  <div class="container mx-auto px-4 py-12">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-3xl mx-auto">
+      <h1 class="text-3xl font-montserrat font-bold text-brand-500 mb-6">
+        Combined Bundle Approach
+      </h1>
+      
+      <div class="space-y-4 text-gray-700">
+        <div class="bg-green-50 border-l-4 border-green-500 p-4">
+          <p class="font-semibold text-green-800 mb-2">✅ Pros:</p>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>Only 1 HTTP request (saves ~100ms connection overhead)</li>
+            <li>Simpler HTML (one script tag)</li>
+            <li>Guaranteed config loads with engine</li>
+          </ul>
+        </div>
+        
+        <div class="bg-red-50 border-l-4 border-red-500 p-4">
+          <p class="font-semibold text-red-800 mb-2">❌ Cons:</p>
+          <ul class="list-disc list-inside space-y-1 text-sm">
+            <li>Changing config = re-download entire 253 KB file</li>
+            <li>Less granular cache control</li>
+            <li>Harder to update just configuration</li>
+          </ul>
+        </div>
+        
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+          <p class="font-semibold text-blue-800 mb-2">💡 Recommendation:</p>
+          <p class="text-sm">
+            Keep separate files unless config is <strong>100% final</strong>. 
+            HTTP/2 makes 2 parallel requests nearly as fast as 1.
+          </p>
+        </div>
+      </div>
+
+      <!-- Demo: Custom colors work -->
+      <div class="mt-8 p-6 bg-gradient-to-r from-brand-500 to-brand-700 rounded-lg text-white">
+        <h2 class="text-xl font-bold mb-2">Custom Theme Works ✨</h2>
+        <p class="text-brand-100">Brand colors from the bundled config</p>
+      </div>
+
+      <!-- Demo: Custom animations work -->
+      <div class="mt-6 p-6 bg-accent-50 rounded-lg text-center animate-float">
+        <p class="text-accent-600 font-montserrat font-semibold">
+          🎈 Floating animation from bundled config
+        </p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

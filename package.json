@@ -1,0 +1,23 @@
+{
+  "name": "skycms-tailwind",
+  "version": "1.0.0",
+  "description": "Tailwind CSS build for SkyCMS website",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/tailwind.css && tailwindcss -i ./src/input.css -o ./dist/tailwind.min.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/tailwind.css --watch",
+    "build:minify": "tailwindcss -i ./src/input.css -o ./dist/tailwind.min.css --minify",
+    "build:skycms": "node build-skycms.js",
+    "build:all": "npm run build && npm run build:skycms"
+  },
+  "keywords": [
+    "tailwind",
+    "css",
+    "skycms"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1",
+    "terser": "^5.44.1"
+  }
+}

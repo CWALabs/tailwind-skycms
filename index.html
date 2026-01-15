@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCMS - Tailwind CSS Demo</title>
+    
+    <!-- Link to the compiled Tailwind CSS -->
+    <link rel="stylesheet" href="dist/tailwind.css">
+    
+    <!-- Google Fonts for custom families -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-roboto">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-brand-500 font-montserrat">SkyCMS</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="text-gray-700 hover:text-brand-600 transition">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-brand-600 transition">Features</a>
+                    <a href="#" class="text-gray-700 hover:text-brand-600 transition">About</a>
+                    <a href="#" class="text-gray-700 hover:text-brand-600 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-brand-500 to-brand-700 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4 font-montserrat animate-float">Welcome to SkyCMS</h1>
+            <p class="text-xl mb-8 font-roboto">A powerful content management system built with custom brand colors and animations</p>
+            <div class="space-x-4">
+                <button class="bg-white text-brand-600 font-bold py-3 px-8 rounded-lg hover:bg-accent-100 transition font-montserrat">
+                    Get Started
+                </button>
+                <button class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-brand-600 transition font-montserrat">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center text-brand-700 mb-12 font-montserrat">Features</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition border-l-4 border-brand-500 animate-slide-in-left">
+                    <div class="text-accent-500 text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold text-brand-700 mb-2 font-montserrat">Fast Performance</h3>
+                    <p class="text-gray-600">Lightning-fast load times and optimized for maximum performance.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition border-l-4 border-accent-400">
+                    <div class="text-accent-500 text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl font-bold text-brand-700 mb-2 font-montserrat">Beautiful Design</h3>
+                    <p class="text-gray-600">Modern, responsive designs with custom brand colors.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition border-l-4 border-brand-600 animate-slide-in-right">
+                    <div class="text-brand-600 text-4xl mb-4">🔒</div>
+                    <h3 class="text-xl font-bold text-brand-700 mb-2 font-montserrat">Secure</h3>
+                    <p class="text-gray-600">Enterprise-grade security to keep your content safe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-brand-700 mb-4 font-montserrat">Powerful Content Management</h2>
+                    <p class="text-gray-600 mb-4 font-inter">
+                        SkyCMS provides all the tools you need to manage your content efficiently. 
+                        From simple pages to complex data structures, we've got you covered.
+                    </p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-brand-500 mr-2 font-bold">✓</span>
+                            Easy-to-use interface
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-brand-500 mr-2 font-bold">✓</span>
+                            Custom content types
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-brand-500 mr-2 font-bold">✓</span>
+                            Media management
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <span class="text-brand-500 mr-2 font-bold">✓</span>
+                            API-first architecture
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-brand-100 to-brand-200 rounded-lg p-8 text-center shadow-lg">
+                    <div class="text-6xl mb-4 animate-float">📊</div>
+                    <p class="text-brand-700 font-semibold font-montserrat">Dashboard Preview</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-gradient-to-r from-brand-600 to-brand-700 text-white py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-4 font-montserrat">Ready to Get Started?</h2>
+            <p class="text-xl mb-8 font-inter">Join thousands of users who trust SkyCMS for their content management needs.</p>
+            <button class="bg-white text-brand-600 font-bold py-3 px-8 rounded-lg hover:bg-accent-100 transition font-montserrat shadow-lg">
+                Start Your Free Trial
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-montserrat">&copy; 2026 SkyCMS. Built with Tailwind CSS</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="text-gray-400 hover:text-brand-400 transition">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-brand-400 transition">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-brand-400 transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

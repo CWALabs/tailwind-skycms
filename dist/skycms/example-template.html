@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyCMS Page Template</title>
+  
+  <!-- SkyCMS Tailwind Distribution (Separate Files - Recommended) -->
+  <script src="/dist/skycms/tailwind-config.js"></script>
+  <script src="/dist/skycms/tailwind-runtime.js"></script>
+  
+  <!-- Alternative: Combined Bundle (Uncomment to use) -->
+  <!-- <script src="/dist/skycms/tailwind-bundle.js"></script> -->
+</head>
+<body class="bg-gray-50">
+  
+  <div class="container mx-auto px-4 py-12">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
+      
+      <!-- Header -->
+      <header class="mb-8">
+        <h1 class="text-4xl font-montserrat font-bold text-brand-500 mb-2">
+          SkyCMS Page Template
+        </h1>
+        <p class="text-gray-600">Production-ready Tailwind CSS distribution with minified config</p>
+      </header>
+
+      <!-- Content -->
+      <main class="space-y-6">
+        
+        <!-- Custom Theme Demo -->
+        <section class="bg-gradient-to-r from-brand-500 to-brand-700 text-white rounded-lg p-6">
+          <h2 class="text-2xl font-bold mb-3">Custom Theme Works ✨</h2>
+          <p class="text-brand-100 mb-4">
+            Brand colors, custom fonts, and animations are all included
+          </p>
+          <div class="flex gap-4">
+            <button class="bg-accent-500 hover:bg-accent-600 px-6 py-3 rounded-lg font-semibold transition">
+              Accent Button
+            </button>
+            <button class="bg-white text-brand-600 hover:bg-brand-50 px-6 py-3 rounded-lg font-semibold transition">
+              Brand Button
+            </button>
+          </div>
+        </section>
+
+        <!-- Animation Demo -->
+        <section class="bg-accent-50 border border-accent-200 rounded-lg p-6">
+          <div class="text-center animate-float">
+            <div class="text-6xl mb-4">🎈</div>
+            <p class="font-montserrat font-semibold text-accent-700">
+              Custom animations work out of the box
+            </p>
+          </div>
+        </section>
+
+        <!-- Usage Info -->
+        <section class="bg-blue-50 border-l-4 border-blue-500 p-6">
+          <h3 class="font-bold text-blue-900 mb-2">📦 Distribution Info</h3>
+          <ul class="text-sm text-blue-800 space-y-1">
+            <li>✓ Self-hosted (no CDN)</li>
+            <li>✓ Production-ready (no warnings)</li>
+            <li>✓ Configuration minified</li>
+            <li>✓ All files have banner comments</li>
+            <li>✓ All Tailwind classes work</li>
+            <li>✓ Custom theme included</li>
+            <li>✓ Browser cacheable</li>
+          </ul>
+        </section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
+        <p>Built with SkyCMS Tailwind Distribution</p>
+        <p class="text-xs mt-1">Files include informative banner comments</p>
+      </footer>
+
+    </div>
+  </div>
+
+</body>
+</html>
