@@ -4,36 +4,45 @@
 
 Once your distribution files are pushed to GitHub, they're automatically available via jsDelivr CDN:
 
-### Latest Version (Main Branch)
+### ⭐ Production (Recommended - Version Tags)
+Use version tags for stable, predictable releases:
+
 ```html
 <!-- Combined Bundle (Recommended) -->
-<script src="https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@main/dist/skycms/tailwind-bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@1.0.0/dist/skycms/tailwind-bundle.js"></script>
 
 <!-- OR Separate Files -->
-<script src="https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@main/dist/skycms/tailwind-config.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@main/dist/skycms/tailwind-runtime.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@1.0.0/dist/skycms/tailwind-config.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@1.0.0/dist/skycms/tailwind-runtime.js"></script>
 
 <!-- CSS Output -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@main/dist/tailwind.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@1.0.0/dist/tailwind.min.css">
 ```
 
-### Specific Version (Recommended for Production)
-Replace `@main` with a specific commit hash or tag:
+**Benefits:**
+- ✅ No surprise updates or breaking changes
+- ✅ You control when to upgrade
+- ✅ Stable and predictable
+- ✅ Can test new versions before switching
+
+### 🔧 Development (Latest from Main Branch)
+Use `@main` for development and testing the latest features:
+
 ```html
-<script src="https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@COMMIT-HASH/dist/skycms/tailwind-bundle.js"></script>
+<!-- Combined Bundle -->
+<script src="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@main/dist/skycms/tailwind-bundle.js"></script>
+
+<!-- CSS Output -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@main/dist/tailwind.min.css">
 ```
 
-## 📝 Setup Instructions
+**Note:** Using `@main` means you'll automatically get the latest changes, which could include breaking changes.
 
-### Step 1: Replace Placeholders
-Replace `YOUR-USERNAME` and `YOUR-REPO` with your actual GitHub username and repository name.
+## 📝 Usage Instructions
 
-For example, if your repo is at `https://github.com/johnsmith/tailwind-skycms`:
-```html
-<script src="https://cdn.jsdelivr.net/gh/johnsmith/tailwind-skycms@main/dist/skycms/tailwind-bundle.js"></script>
-```
+The repository is hosted at `https://github.com/CWALabs/tailwind-skycms`
 
-### Step 2: Use in Your HTML
+### Production Site Example (Recommended)
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -43,10 +52,10 @@ For example, if your repo is at `https://github.com/johnsmith/tailwind-skycms`:
   <title>My SkyCMS Site</title>
   
   <!-- Option 1: Use runtime JS (like current CDN approach) -->
-  <script src="https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@main/dist/skycms/tailwind-bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@1.0.0/dist/skycms/tailwind-bundle.js"></script>
   
   <!-- Option 2: Use compiled CSS (faster, production-ready) -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@main/dist/tailwind.min.css"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@1.0.0/dist/tailwind.min.css"> -->
 </head>
 <body>
   <h1 class="text-brand-500 font-montserrat text-4xl">Hello SkyCMS!</h1>
@@ -54,16 +63,56 @@ For example, if your repo is at `https://github.com/johnsmith/tailwind-skycms`:
 </html>
 ```
 
-## 🔄 Automatic Updates
+### Development/Testing Example
+```html
+<head>
+  <!-- Use @main for latest features (auto-updates) -->
+  <script src="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@main/dist/skycms/tailwind-bundle.js"></script>
+</headou're ready to release a stable version:
 
-Every time you push to your `main` branch:
-1. GitHub Actions builds the distribution
-2. Commits the `dist/` files to your repository
-3. jsDelivr automatically picks up the changes
-4. Your CDN URLs serve the latest version (may take a few minutes to update cache)
+```bash
+# Make sure your dist/ files are built and committed
+npm run build:all
+git add dist/
+git commit -m "Build distribution for v1.0.0"
 
-## 🏷️ Version Pinning (Best Practice)
+# Create and push the tag
+git tag 1.0.0
+git push origin 1.0.0
+```
 
+**Tag Naming:**
+- Use semantic versioning: `1.0.0`, `1.0.1`, `1.1.0`, `2.0.0`
+- **Don't use** the `v` prefix (jsDelivr works better without it)
+- Major version (1.x.x) = breaking changes
+- Minor version (x.1.x) = new features
+- Patch version (x.x.1) = bug fixes
+
+### Step 2: Users Reference the Tag
+
+Production sites use the tag version:
+```html
+<script src="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@1.0.0/dist/skycms/tailwind-bundle.js"></script>
+```
+
+### Step 3: Release Updates
+
+When you have improvements:
+```bash
+# Build and commit
+npm run build:all
+git add dist/
+git commit -m "Build distribution for v1.1.0"
+
+# Create new tag
+git tag 1.1.0
+git push origin 1.1.0
+```
+
+Users can then upgrade by changing `@1.0.0` to `@1.1.0` in their HTML when ready.
+
+### Alternative: Using Commit Hash (Not Recommended)
+You can also pin to specific commits, but tags are clearer:
 For production sites, pin to a specific version to prevent unexpected changes:
 
 ### Using Git Tags
@@ -75,12 +124,12 @@ git push origin v1.0.0
 
 Then use:
 ```html
-<script src="https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@v1.0.0/dist/skycms/tailwind-bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@v1.0.0/dist/skycms/tailwind-bundle.js"></script>
 ```
 
 ### Using Commit Hash
 ```html
-<script src="https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@abc1234/dist/skycms/tailwind-bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@abc1234/dist/skycms/tailwind-bundle.js"></script>
 ```
 
 ## 🎯 Which Approach to Use?
@@ -93,17 +142,42 @@ Then use:
 - **Best for:** Development, prototyping, dynamic sites
 
 ### Compiled CSS (tailwind.min.css)
-- ✅ Much smaller file size
-- ✅ Faster page loads (pure CSS)
-- ✅ Production-ready
-- ❌ Only includes classes you've used
+### Check Available Files
+- **Main branch:** `https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@main/dist/skycms/`
+- **Specific version:** `https://cdn.jsdelivr.net/gh/CWALabs/tailwind-skycms@1.0.0/dist/skycms/`
+
+### View All Available Versions
+Check all published tags/versions:
+```
+https://data.jsdelivr.com/v1/packages/gh/CWALabs/tailwind-skycms
+```
+
+### Test a File
+Click on `tailwind-bundle.js` in the directory listing to verify it loads correctly.
 - **Best for:** Production sites, better performance
+Best Practices
 
-## 🔍 Verifying Your CDN Links
+**For Production Sites:**
+- ✅ Always use version tags (e.g., `@1.0.0`)
+- ✅ Test new versions before upgrading
+- ✅ Document which version you're using
+- ❌ Don't use `@main` - you'll get unexpected updates
 
-After your first build completes:
-1. Go to `https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@main/dist/skycms/`
-2. You should see a directory listing of your files
+**For Development:**
+- ✅ Use `@main` to test latest features
+- ✅ Switch to a version tag before going live
+
+**Tag Versioning:**
+- ✅ Create a new tag for each release
+- ✅ Use semantic versioning (1.0.0, 1.1.0, 2.0.0)
+- ✅ Keep a changelog of what changed
+- ❌ Don't delete old tags - users might depend on them
+
+**CDN Tips:**
+- jsDelivr has a global CDN with high availability
+- Files are cached aggressively - purge cache at https://www.jsdelivr.com/tools/purge if needed
+- The CDN is completely free with no limits
+- Check available versions: `https://data.jsdelivr.com/v1/packages/gh/CWALabs/tailwind-skycms`ur files
 3. Click on `tailwind-bundle.js` to verify it loads
 
 ## 💡 Tips
