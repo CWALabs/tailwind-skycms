@@ -1,6 +1,14 @@
 # SkyCMS Tailwind CSS Build
 
-This project contains the Tailwind CSS build setup for the SkyCMS website. It compiles Tailwind CSS into a ready-to-use CSS file that can be included in any web page.
+This project contains the Tailwind CSS build setup for the SkyCMS website. It compiles Tailwind CSS into a ready-to-use CSS file and provides a self-hosted JavaScript runtime for dynamic styling.
+
+## 🌟 Features
+
+- **Custom Brand Styling** - Pre-configured with SkyCMS brand colors, fonts, and animations
+- **Multiple Distribution Formats** - Compiled CSS and JavaScript runtime options
+- **CDN Ready** - Automatically published to jsDelivr for easy integration
+- **GitHub Actions** - Automated builds on every push
+- **Production Optimized** - Minified outputs for best performance
 
 ## 🚀 Quick Start
 
@@ -23,21 +31,50 @@ The compiled CSS will be available at `dist/tailwind.css` and `dist/tailwind.min
 - **`npm run build`** - Build both regular and minified CSS files (creates `dist/tailwind.css` and `dist/tailwind.min.css`)
 - **`npm run watch`** - Watch for changes and rebuild automatically (for development)
 - **`npm run build:minify`** - Build only the minified CSS for production (creates `dist/tailwind.min.css`)
+- **`npm run build:skycms`** - Build self-hosted JavaScript runtime distribution (creates `dist/skycms/`)
+- **`npm run build:all`** - Build everything: CSS and JavaScript runtime distributions
 
 ## 📁 Project Structure
 
 ```
-tailwind-css/
+tailwind-skycms/
 ├── src/
-│   └── input.css          # Source CSS with Tailwind directives
+│   └── input.css                    # Source CSS with Tailwind directives
 ├── dist/
-│   └── tailwind.css       # Compiled CSS output
-├── tailwind.config.js     # Tailwind configuration
-├── package.json           # Project dependencies and scripts
-└── README.md              # This file
+│   ├── tailwind.css                 # Compiled CSS output
+│   ├── tailwind.min.css             # Minified CSS output
+│   └── skycms/                      # Self-hosted JavaScript runtime
+│       ├── tailwind-bundle.js       # Combined runtime + config
+│       ├── tailwind-runtime.js      # Tailwind engine only
+│       └── tailwind-config.js       # Configuration only
+├── .gUsing in Your Projects
+
+### Option 1: Via CDN (Easiest - Recommended)
+
+Use jsDelivr to load files directly from this GitHub repository:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyCMS Website</title>
+    
+    <!-- Option A: Use compiled CSS (faster, production-ready) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/YOUR-USERNAME/YOUR-REPO@main/dist/tailwind.min.css">
+ link rel="stylesheet" href="path/to/dist/tailwind.min.css">
 ```
 
-## 🌐 Adding to a Web Page
+#### Using JavaScript Runtime
+
+```html
+<!-- Combined bundle (config + runtime) -->
+<script src="path/to/dist/skycms/tailwind-bundle.js"></script>
+
+<!-- OR separate files -->
+<script src="path/to/dist/skycms/tailwind-config.js"></script>
+<script src="path/to/dist/skycms/tailwind-runtime.js"></script
 
 ### Basic HTML Example
 
@@ -215,11 +252,41 @@ module.exports = {
 
 This ensures Tailwind only includes the classes you actually use, keeping the file size small.
 
-## 🔄 Development Workflow
+## 🔄 Documentation
 
-For active development:
+### Project Documentation
+- **[CDN_USAGE.md](CDN_USAGE.md)** - Complete guide to using files via jsDelivr CDN
+- **[SKYCMS_BUILD_GUIDE.md](SKYCMS_BUILD_GUIDE.md)** - Detailed build process documentation
+- **[CDN_VS_BUILD_PROCESS.md](CDN_VS_BUILD_PROCESS.md)** - Understanding runtime vs compiled approaches
+- *🤖 Automated Builds
 
-1. Run the watch command:
+This project uses GitHub Actions to automatically:
+- Build the distribution on every push to `main`
+- Commit and push the built files back to the repository
+- Make files instantly available via jsDelivr CDN
+
+The workflow runs automatically - no manual intervention needed!
+
+## 🛠️ Troubleshooting
+
+**Issue:** CSS file is very large
+- **Solution:** Make sure the `content` paths in `tailwind.config.js` point to your actual template files. Tailwind will only include the classes you're actually using.
+
+**Issue:** Styles not updating
+- **Solution:** Use `npm run watch` during development, or rebuild with `npm run build` after making changes.
+
+**Issue:** Classes not working
+- **Solution:** Verify the CSS file is properly linked in your HTML and that you've rebuilt after adding new classes.
+
+**Issue:** CDN not showing latest changes
+- **Solution:** Wait a few minutes for jsDelivr cache to update, or purge cache at https://www.jsdelivr.com/tools/purge
+
+**Issue:** Custom colors/fonts not included in CSS
+- **Solution:** Make sure you're using the classes in your HTML files. See [CDN_VS_BUILD_PROCESS.md](CDN_VS_BUILD_PROCESS.md) for details.
+
+## 📝 License
+
+MIT
    ```bash
    npm run watch
    ```

@@ -1,0 +1,59 @@
+name: Build Distribution
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - develop
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build distribution
+        run: npm run build:all
+      
+      - name: Check build outputs
+        run: |
+          echo "📦 Build completed successfully!"
+          echo "Contents of dist directory:"
+          ls -la dist/
+          if [ -d "dist/skycms" ]; then
+            echo "Contents of dist/skycms directory:"
+            ls -la dist/skycms/
+          fi
+      
+      - name: Commit and push distribution files
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add dist/
+          git diff --staged --quiet || git commit -m "chore: update distribution files [skip ci]"
+          git push
+      
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 30
