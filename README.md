@@ -1,6 +1,6 @@
 # SkyCMS Tailwind CSS Build
 
-[![Build Distribution](https://github.com/YOUR-USERNAME/YOUR-REPO/actions/workflows/build.yml/badge.svg)](https://github.com/YOUR-USERNAME/YOUR-REPO/actions/workflows/build.yml)
+[![Build Distribution](https://github.com/CWALabs/tailwind-skycms/actions/workflows/build.yml/badge.svg)](https://github.com/CWALabs/tailwind-skycms/actions/workflows/build.yml)
 
 This project contains the Tailwind CSS build setup for the SkyCMS website. It compiles Tailwind CSS into a ready-to-use CSS file and provides a self-hosted JavaScript runtime for dynamic styling.
 
