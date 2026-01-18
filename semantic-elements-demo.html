@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic HTML Elements Demo - SkyCMS Tailwind</title>
+  <link rel="stylesheet" href="dist/tailwind.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+  
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm">
+    <div class="container-wide">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <header>
+      <h1>Semantic HTML Elements Demo</h1>
+      <p class="!text-lg !text-gray-600">All these elements have automatic styling — no utility classes needed!</p>
+    </header>
+
+    <!-- Article Example -->
+    <article>
+      <h2>Typography Elements</h2>
+      
+      <p>This is a regular paragraph with <strong>bold text</strong>, <em>italic text</em>, and <a href="#">a link</a>. All styled automatically using semantic HTML tags.</p>
+
+      <p>Here's some <code>inline code</code> that looks like a code snippet. It has a light gray background and brand-colored text.</p>
+
+      <h3>Ordered List Example</h3>
+      <ol>
+        <li>First item in an ordered list</li>
+        <li>Second item with proper spacing</li>
+        <li>Third item - notice the automatic styling</li>
+      </ol>
+
+      <h3>Unordered List Example</h3>
+      <ul>
+        <li>First bullet point</li>
+        <li>Second bullet point</li>
+        <li>Third bullet point with <strong>emphasis</strong></li>
+      </ul>
+
+      <h3>Code Block Example</h3>
+      <pre><code>function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet('World'));</code></pre>
+
+      <h3>Blockquote Example</h3>
+      <blockquote>
+        "Design is not just what it looks like and feels like. Design is how it works." — Steve Jobs
+      </blockquote>
+
+      <hr>
+
+      <h3>Table Example</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Architecture</td>
+            <td>Tailored web architecture services</td>
+            <td>Custom</td>
+          </tr>
+          <tr>
+            <td>Design</td>
+            <td>User-focused creative solutions</td>
+            <td>Custom</td>
+          </tr>
+          <tr>
+            <td>Engineering</td>
+            <td>Enterprise-grade platforms</td>
+            <td>Custom</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+
+    <!-- Section with Columns -->
+    <section>
+      <h2>Column Layouts</h2>
+      
+      <h3>2-Column Layout</h3>
+      <div class="columns columns-2 mb-8">
+        <div class="card">
+          <h4>Column 1</h4>
+          <p>This is the first column using the <code>.columns-2</code> class. It automatically stacks on mobile devices.</p>
+        </div>
+        <div class="card">
+          <h4>Column 2</h4>
+          <p>This is the second column. Both columns have equal width and gap spacing.</p>
+        </div>
+      </div>
+
+      <h3>3-Column Layout</h3>
+      <div class="columns columns-3 mb-8">
+        <div class="card">
+          <h4>Service 1</h4>
+          <p>Architecture design and planning for scalable solutions.</p>
+        </div>
+        <div class="card">
+          <h4>Service 2</h4>
+          <p>Creative design with user-focused approach.</p>
+        </div>
+        <div class="card">
+          <h4>Service 3</h4>
+          <p>Engineering excellence for peak performance.</p>
+        </div>
+      </div>
+
+      <h3>4-Column Layout</h3>
+      <div class="columns columns-4">
+        <div class="card">
+          <h5>Feature 1</h5>
+          <p>First feature card</p>
+        </div>
+        <div class="card">
+          <h5>Feature 2</h5>
+          <p>Second feature card</p>
+        </div>
+        <div class="card">
+          <h5>Feature 3</h5>
+          <p>Third feature card</p>
+        </div>
+        <div class="card">
+          <h5>Feature 4</h5>
+          <p>Fourth feature card</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sidebar Layout Example -->
+    <section>
+      <h2>Sidebar Layouts</h2>
+      
+      <h3>Content with Right Sidebar</h3>
+      <div class="layout-sidebar mb-8">
+        <article>
+          <h4>Main Content Area</h4>
+          <p>This is the main content area. It takes up the majority of the space while the sidebar on the right provides supplementary information.</p>
+          <p>On mobile devices (below 1024px), the layout automatically stacks vertically.</p>
+        </article>
+        <aside>
+          <h5>Sidebar</h5>
+          <p>This is the sidebar content. Fixed width of 300px on desktop.</p>
+          <ul>
+            <li>Related link 1</li>
+            <li>Related link 2</li>
+            <li>Related link 3</li>
+          </ul>
+        </aside>
+      </div>
+
+      <h3>Content with Left Sidebar</h3>
+      <div class="layout-sidebar-left">
+        <aside>
+          <h5>Left Sidebar</h5>
+          <nav>
+            <ul class="!flex-col !gap-2">
+              <li><a href="#section1">Section 1</a></li>
+              <li><a href="#section2">Section 2</a></li>
+              <li><a href="#section3">Section 3</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <article>
+          <h4>Main Content Area</h4>
+          <p>This layout has the sidebar on the left side. Perfect for navigation menus or table of contents.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Container Examples -->
+    <section>
+      <h2>Container Width Examples</h2>
+      
+      <div class="container-narrow bg-white p-6 rounded-lg shadow mb-4">
+        <h4>Narrow Container</h4>
+        <p>This content is in a <code>.container-narrow</code> (max-width: 768px). Perfect for articles and blog posts for optimal readability.</p>
+      </div>
+
+      <div class="container-wide bg-white p-6 rounded-lg shadow">
+        <h4>Wide Container</h4>
+        <p>This content is in a <code>.container-wide</code> (max-width: 1600px). Great for dashboards and wide layouts.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container-wide">
+      <p>&copy; 2026 Custom WebArts. All rights reserved.</p>
+      <p>Built with semantic HTML and automatic Tailwind styling.</p>
+    </div>
+  </footer>
+
+  <!-- Reference Card -->
+  <div class="fixed bottom-4 right-4 max-w-sm">
+    <div class="card bg-brand-500 text-white">
+      <h5 class="!text-white !mb-3">✨ Semantic Elements Styled</h5>
+      <ul class="!text-white text-sm space-y-1">
+        <li>✓ Headings (h1-h6)</li>
+        <li>✓ Paragraphs, links, lists</li>
+        <li>✓ Code, blockquotes, tables</li>
+        <li>✓ Main, article, section, aside</li>
+        <li>✓ Nav, header, footer</li>
+        <li>✓ Column layouts (.columns-2/3/4)</li>
+        <li>✓ Sidebar layouts</li>
+        <li>✓ Cards and containers</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

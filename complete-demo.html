@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Semantic HTML & Tailwind Styling Demo</title>
+  <link rel="stylesheet" href="dist/tailwind.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .demo-section {
+      background: white;
+      border-left: 4px solid #00ADB5;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .demo-label {
+      display: inline-block;
+      background: #00ADB5;
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="container-wide">
+      <ul>
+        <li><a href="#headings">Headings</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#semantic">Semantic Elements</a></li>
+        <li><a href="#layouts">Layouts</a></li>
+        <li><a href="#table">Tables</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <header class="bg-gradient-to-r from-brand-500 to-brand-700 text-white py-12 px-6">
+      <div class="container-wide">
+        <h1 class="!text-white !mb-2">Complete HTML & CSS Styling Demo</h1>
+        <p class="!text-white !text-lg opacity-90">All semantic HTML elements with automatic Tailwind styling — no utility classes needed!</p>
+      </div>
+    </header>
+
+    <!-- HEADINGS SECTION -->
+    <section id="headings" class="container-wide">
+      <h2 class="mt-8">Heading Elements</h2>
+      <p>All headings use fluid typography that scales from 1280px to 1920px. Montserrat font is used for H1-H4, Roboto for H5-H6.</p>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;h1&gt;</span>
+        <h1>This is an H1 Heading</h1>
+        <p class="text-sm text-gray-500">Font: Montserrat Bold • Size: clamp(3rem, 2.66rem + 1.71vw, 4rem) • Color: #21252B</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;h2&gt;</span>
+        <h2>This is an H2 Heading</h2>
+        <p class="text-sm text-gray-500">Font: Montserrat Semibold • Size: clamp(2.25rem, 2.02rem + 1.14vw, 3rem) • Color: #393E46</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;h3&gt;</span>
+        <h3>This is an H3 Heading</h3>
+        <p class="text-sm text-gray-500">Font: Montserrat Semibold • Size: clamp(1.875rem, 1.69rem + 0.93vw, 2.5rem) • Color: #393E46</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;h4&gt;</span>
+        <h4>This is an H4 Heading</h4>
+        <p class="text-sm text-gray-500">Font: Montserrat Semibold • Size: clamp(1.25rem, 1.13rem + 0.59vw, 1.75rem) • Color: #4F5B6B</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;h5&gt;</span>
+        <h5>This is an H5 Heading</h5>
+        <p class="text-sm text-gray-500">Font: Roboto Semibold • Size: 1.125rem • Color: #5C6D7E</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;h6&gt;</span>
+        <h6>This is an H6 Heading</h6>
+        <p class="text-sm text-gray-500">Font: Roboto Semibold • Size: 1rem • Color: #5C6D7E</p>
+      </div>
+    </section>
+
+    <!-- TYPOGRAPHY SECTION -->
+    <section id="typography" class="container-wide">
+      <h2 class="mt-8">Typography Elements</h2>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;p&gt;</span>
+        <p>This is a regular paragraph with automatic styling. Paragraphs use Roboto font with a 1.6 line-height for optimal readability. The color is set to a medium gray (#4F5B6B) for contrast.</p>
+        <p>You can have multiple paragraphs and they will maintain proper spacing automatically.</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;a&gt;</span>
+        <p>This paragraph contains <a href="#">a link with automatic styling</a>. Links are brand-colored (#088C96) with underline. Hover over the link to see the brand-500 color (#00DEDE).</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;strong&gt; &amp; &lt;b&gt;</span>
+        <p>This paragraph has <strong>bold text using strong tag</strong> and <b>bold text using b tag</b>. Both are styled with 600 font-weight and darker color.</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;em&gt; &amp; &lt;i&gt;</span>
+        <p>This paragraph contains <em>emphasized text using em tag</em> and <i>italic text using i tag</i>. Both display as italics.</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;code&gt;</span>
+        <p>Here's some <code>inline code</code> styled with a light gray background, monospace font, and brand color. Perfect for referencing variables or short code snippets in text.</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;pre&gt; &amp; &lt;code&gt;</span>
+        <pre><code>// This is a code block example
+function createGreeting(name) {
+  const message = `Hello, ${name}!`;
+  console.log(message);
+  return message;
+}
+
+createGreeting('Developer');</code></pre>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;blockquote&gt;</span>
+        <blockquote>
+          "The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle." — Steve Jobs
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- LISTS SECTION -->
+    <section id="lists" class="container-wide">
+      <h2 class="mt-8">List Elements</h2>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;ul&gt; &amp; &lt;li&gt;</span>
+        <h4>Unordered List</h4>
+        <ul>
+          <li>First bullet point with automatic styling</li>
+          <li>Second item - notice the proper spacing</li>
+          <li>Third item with a longer description to show how line wrapping works with multiple lines of text in a list item</li>
+          <li><strong>Can mix in</strong> <em>other</em> <code>text elements</code> too</li>
+        </ul>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;ol&gt; &amp; &lt;li&gt;</span>
+        <h4>Ordered List</h4>
+        <ol>
+          <li>First step in a numbered process</li>
+          <li>Second step with automatic numbering</li>
+          <li>Third step shows how decimals are used</li>
+          <li>Fourth and final step</li>
+        </ol>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;nav&gt; &amp; &lt;ul&gt;</span>
+        <h4>Navigation Example</h4>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- SEMANTIC ELEMENTS SECTION -->
+    <section id="semantic" class="container-wide">
+      <h2 class="mt-8">Semantic Layout Elements</h2>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;article&gt;</span>
+        <article>
+          <h3>Article Element</h3>
+          <p>This is an article element. It has white background, padding, rounded corners, and a subtle shadow. Perfect for blog posts, news items, or standalone content pieces.</p>
+          <p>Articles can contain all other semantic and text elements nested inside them.</p>
+        </article>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;aside&gt;</span>
+        <aside>
+          <h4>Aside Element (Sidebar)</h4>
+          <p>This is an aside element, typically used for supplementary content like sidebars, related links, or callout boxes.</p>
+          <ul>
+            <li>Related article 1</li>
+            <li>Related article 2</li>
+            <li>Related article 3</li>
+          </ul>
+        </aside>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;section&gt;</span>
+        <section class="bg-gray-50 p-4 rounded">
+          <h4>Section Element</h4>
+          <p>Sections are used to group related content together. They have automatic bottom margin spacing.</p>
+        </section>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;main&gt;</span>
+        <p>The &lt;main&gt; element wraps all your primary content. It auto-centers content with max-width: 1280px and includes padding.</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;header&gt;</span>
+        <p>The &lt;header&gt; element appears at the top of pages or sections. You saw it at the top of this page with the gradient background.</p>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;footer&gt;</span>
+        <footer class="!mt-4">
+          <p>This is a footer element. It has a top border, smaller text, and muted color. Perfect for copyright info and secondary links.</p>
+        </footer>
+      </div>
+    </section>
+
+    <!-- LAYOUT PATTERNS SECTION -->
+    <section id="layouts" class="container-wide">
+      <h2 class="mt-8">Layout Patterns</h2>
+
+      <h3>2-Column Layout</h3>
+      <div class="columns columns-2 mb-6">
+        <div class="card">
+          <h4>Column One</h4>
+          <p>This uses the <code>.columns-2</code> class. On mobile (under 768px), it automatically stacks into a single column.</p>
+        </div>
+        <div class="card">
+          <h4>Column Two</h4>
+          <p>Both columns have equal width with a 2rem gap between them. Cards inside have automatic styling too.</p>
+        </div>
+      </div>
+
+      <h3>3-Column Layout</h3>
+      <div class="columns columns-3 mb-6">
+        <div class="card">
+          <h4>Service A</h4>
+          <p>Architecture and scalable design</p>
+        </div>
+        <div class="card">
+          <h4>Service B</h4>
+          <p>Creative visual solutions</p>
+        </div>
+        <div class="card">
+          <h4>Service C</h4>
+          <p>Technical engineering excellence</p>
+        </div>
+      </div>
+
+      <h3>4-Column Layout</h3>
+      <div class="columns columns-4 mb-6">
+        <div class="card">
+          <h5>Feature 1</h5>
+          <p>Short description</p>
+        </div>
+        <div class="card">
+          <h5>Feature 2</h5>
+          <p>Short description</p>
+        </div>
+        <div class="card">
+          <h5>Feature 3</h5>
+          <p>Short description</p>
+        </div>
+        <div class="card">
+          <h5>Feature 4</h5>
+          <p>Short description</p>
+        </div>
+      </div>
+
+      <h3>Content + Right Sidebar</h3>
+      <div class="layout-sidebar mb-6">
+        <article>
+          <h4>Main Content Area</h4>
+          <p>This is the main content area using <code>.layout-sidebar</code>. It takes up most of the space on desktop while the sidebar on the right is fixed at 300px.</p>
+          <p>On tablets and mobile (under 1024px), this layout automatically stacks vertically.</p>
+          <h5>Subsection</h5>
+          <p>You can nest all semantic elements inside the main area.</p>
+        </article>
+        <aside>
+          <h5>Right Sidebar</h5>
+          <p>Fixed width sidebar content. Great for:</p>
+          <ul>
+            <li>Related links</li>
+            <li>Call-to-action boxes</li>
+            <li>Additional info</li>
+            <li>Social media</li>
+          </ul>
+        </aside>
+      </div>
+
+      <h3>Left Sidebar + Content</h3>
+      <div class="layout-sidebar-left">
+        <aside>
+          <h5>Navigation Menu</h5>
+          <nav>
+            <ul class="!flex-col !gap-2">
+              <li><a href="#section1">Getting Started</a></li>
+              <li><a href="#section2">Core Concepts</a></li>
+              <li><a href="#section3">Advanced Topics</a></li>
+              <li><a href="#section4">Examples</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <article>
+          <h4>Main Content Area</h4>
+          <p>This layout uses <code>.layout-sidebar-left</code> for a left navigation sidebar. Common for documentation sites and knowledge bases.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- TABLES SECTION -->
+    <section id="table" class="container-wide">
+      <h2 class="mt-8">Table Elements</h2>
+
+      <div class="demo-section">
+        <span class="demo-label">&lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</span>
+        <table>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Description</th>
+              <th>Best For</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Architecture</td>
+              <td>Tailored web architecture services and planning</td>
+              <td>Large-scale projects</td>
+              <td>Custom quote</td>
+            </tr>
+            <tr>
+              <td>Design</td>
+              <td>Creative visual solutions and brand development</td>
+              <td>Branding projects</td>
+              <td>Custom quote</td>
+            </tr>
+            <tr>
+              <td>Engineering</td>
+              <td>Enterprise-grade platform development</td>
+              <td>High-traffic sites</td>
+              <td>Custom quote</td>
+            </tr>
+            <tr>
+              <td>Hosting</td>
+              <td>Edge hosting with 100% uptime SLA</td>
+              <td>All projects</td>
+              <td>Starting at $50/mo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CONTAINER EXAMPLES -->
+    <section class="container-wide mb-8">
+      <h2 class="mt-8">Container Utilities</h2>
+
+      <div class="demo-section mb-4">
+        <span class="demo-label">.container-narrow</span>
+        <div class="container-narrow bg-gray-100 p-4 rounded">
+          <h5>Narrow Container (768px max)</h5>
+          <p>Perfect for articles, blog posts, and long-form content where readability is important. The narrower width keeps line lengths optimal.</p>
+        </div>
+      </div>
+
+      <div class="demo-section">
+        <span class="demo-label">.container-wide</span>
+        <div class="container-wide bg-gray-100 p-4 rounded">
+          <h5>Wide Container (1600px max)</h5>
+          <p>Great for dashboards, portfolios, and layouts that need more horizontal space.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCE SECTION -->
+    <section class="bg-blue-50 border-l-4 border-blue-500 py-12 px-6">
+      <div class="container-wide">
+        <h2 class="!mb-6">Quick Reference</h2>
+        <div class="columns columns-2">
+          <div>
+            <h4 class="text-blue-900">Text Elements</h4>
+            <ul class="text-blue-800">
+              <li><code>&lt;h1&gt;-&lt;h6&gt;</code> - Headings (auto-styled)</li>
+              <li><code>&lt;p&gt;</code> - Paragraphs</li>
+              <li><code>&lt;a&gt;</code> - Links (brand color)</li>
+              <li><code>&lt;strong&gt;, &lt;b&gt;</code> - Bold text</li>
+              <li><code>&lt;em&gt;, &lt;i&gt;</code> - Italic text</li>
+              <li><code>&lt;code&gt;</code> - Inline code</li>
+              <li><code>&lt;pre&gt;</code> - Code blocks</li>
+              <li><code>&lt;blockquote&gt;</code> - Quotes</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-blue-900">Layout Elements</h4>
+            <ul class="text-blue-800">
+              <li><code>&lt;main&gt;</code> - Main content wrapper</li>
+              <li><code>&lt;article&gt;</code> - Content cards</li>
+              <li><code>&lt;section&gt;</code> - Content sections</li>
+              <li><code>&lt;aside&gt;</code> - Sidebar/supplementary</li>
+              <li><code>&lt;nav&gt;</code> - Navigation menus</li>
+              <li><code>&lt;header&gt;</code> - Page/section header</li>
+              <li><code>&lt;footer&gt;</code> - Page/section footer</li>
+              <li><code>&lt;table&gt;</code> - Data tables</li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-6 columns columns-2">
+          <div>
+            <h4 class="text-blue-900">Column Classes</h4>
+            <ul class="text-blue-800">
+              <li><code>.columns</code> - Grid container</li>
+              <li><code>.columns-2</code> - 2-column grid</li>
+              <li><code>.columns-3</code> - 3-column grid</li>
+              <li><code>.columns-4</code> - 4-column grid</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-blue-900">Layout Classes</h4>
+            <ul class="text-blue-800">
+              <li><code>.layout-sidebar</code> - Content + right sidebar</li>
+              <li><code>.layout-sidebar-left</code> - Left sidebar + content</li>
+              <li><code>.container-narrow</code> - 768px max (articles)</li>
+              <li><code>.container-wide</code> - 1600px max (dashboards)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="container-wide py-8">
+      <p class="!text-gray-400">&copy; 2026 Custom WebArts. Built with semantic HTML and automatic Tailwind CSS styling.</p>
+      <p class="!text-sm !text-gray-500 !mt-2">All elements on this page use base layer styles — no utility classes required for basic semantic HTML.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
