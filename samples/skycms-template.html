@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyCMS Page Template - Optimized</title>
+  
+  <!-- Load configuration FIRST (cached across all pages) -->
+  <script src="/tailwind-config.js"></script>
+  
+  <!-- Load Tailwind JavaScript (cached across all pages) -->
+  <script src="/tailwind.js"></script>
+</head>
+<body class="bg-gray-50">
+  
+  <!-- Header -->
+  <header class="bg-brand-500 text-white py-6">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-montserrat font-bold">SkyCMS Optimized Page</h1>
+      <p class="text-brand-100 mt-2">Configuration cached for performance</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-12">
+    <section class="bg-white rounded-lg shadow-md p-8 mb-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Cache Optimization Benefits</h2>
+      
+      <div class="space-y-4 text-gray-700">
+        <div class="flex items-start">
+          <span class="text-accent-500 font-bold mr-3">✓</span>
+          <div>
+            <strong>Configuration File:</strong> <code class="bg-gray-100 px-2 py-1 rounded">tailwind-config.js</code> 
+            loads once and is cached by browser
+          </div>
+        </div>
+        
+        <div class="flex items-start">
+          <span class="text-accent-500 font-bold mr-3">✓</span>
+          <div>
+            <strong>Tailwind Engine:</strong> <code class="bg-gray-100 px-2 py-1 rounded">tailwind.js</code> 
+            loads once and is cached by browser
+          </div>
+        </div>
+        
+        <div class="flex items-start">
+          <span class="text-accent-500 font-bold mr-3">✓</span>
+          <div>
+            <strong>Each Page:</strong> Only HTML content (no inline config), minimal payload
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Example: Using custom theme -->
+    <section class="bg-gradient-to-r from-brand-500 to-brand-700 text-white rounded-lg p-8 mb-8">
+      <h2 class="text-2xl font-montserrat font-bold mb-4">Custom Theme Colors Work</h2>
+      <p class="text-brand-100 mb-4">Brand and accent colors from cached configuration</p>
+      
+      <div class="flex gap-4">
+        <button class="bg-accent-500 hover:bg-accent-600 text-white font-semibold px-6 py-3 rounded-lg transition">
+          Accent Button
+        </button>
+        <button class="bg-white text-brand-600 hover:bg-brand-50 font-semibold px-6 py-3 rounded-lg transition">
+          Brand Button
+        </button>
+      </div>
+    </section>
+
+    <!-- Example: Using custom animations -->
+    <section class="bg-white rounded-lg shadow-md p-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-6">Custom Animations Work</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-brand-50 p-6 rounded-lg text-center animate-float">
+          <div class="text-brand-500 text-4xl mb-3">🎈</div>
+          <p class="font-montserrat font-semibold">Floating Animation</p>
+        </div>
+        
+        <div class="bg-accent-50 p-6 rounded-lg text-center animate-fade-in">
+          <div class="text-accent-500 text-4xl mb-3">✨</div>
+          <p class="font-montserrat font-semibold">Fade In Animation</p>
+        </div>
+        
+        <div class="bg-gray-100 p-6 rounded-lg text-center">
+          <div class="text-gray-600 text-4xl mb-3">⚡</div>
+          <p class="font-montserrat font-semibold">Custom Fonts</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-8 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm">SkyCMS Optimized Template</p>
+      <p class="text-xs mt-2 text-gray-500">
+        2 cached files (tailwind-config.js + tailwind.js) + minimal HTML per page
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

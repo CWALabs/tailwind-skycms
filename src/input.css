@@ -4,6 +4,11 @@
 
 /* Base heading styles */
 @layer base {
+  /* Fixed nav spacing: compensate for fixed positioned navbar */
+  body {
+    padding-top: 76px;
+  }
+
   h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: clamp(2rem, 1.82rem + 0.91vw, 2.75rem);
@@ -233,6 +238,102 @@
 
 /* Custom gradient and effect utilities */
 @layer components {
+  .btn-primary {
+    background-color: #FFFFFF;
+    color: #00ADB5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #FFF1C6;
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 0.75rem 2rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .btn-outline:hover {
+    background-color: #FFFFFF;
+    color: #00ADB5;
+  }
+
+  .feature-checklist {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .feature-checklist li {
+    display: flex;
+    align-items: center;
+    color: #374151;
+  }
+
+  .feature-checklist .checkmark {
+    color: #00ADB5;
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+
+  .feature-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .feature-list li {
+    display: flex;
+    align-items: center;
+    color: #374151;
+  }
+
+  .feature-list .feature-icon {
+    margin-right: 0.75rem;
+  }
+
+  .footer-link {
+    color: #9CA3AF;
+    transition: color 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: #00ADB5;
+  }
+
+  .feature-card {
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .feature-card:hover {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .feature-card.accent-left {
+    border-left: 4px solid #00ADB5;
+  }
+
+  .feature-card.brand-left {
+    border-left: 4px solid #00ADB5;
+  }
+
+  .qa-box {
+    border-left: 4px solid #00ADB5;
+    padding-left: 1rem;
+  }
+
   .hero-gradient {
     background: linear-gradient(135deg, #21252b 0%, #393e46 100%);
   }

@@ -1,5 +1,7 @@
 # Using SkyCMS Tailwind via jsDelivr CDN
 
+> Documentation: [Back to Docs Index](./index.md)
+
 ## 🚀 CDN Links
 
 Once your distribution files are pushed to GitHub, they're automatically available via jsDelivr CDN:

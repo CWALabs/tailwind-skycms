@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Why SkyCMS</title>
+    <meta property="og:title" content="Why SkyCMS" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="" />
+    <meta property="article:modified_time" content="2025-12-13 20:55:30Z">
+    <meta name="cwps-meta-path-url" content="why-skycms" />
+    <meta name="cwps-meta-path-updated" content="12/13/2025 20:55:30 &#x2B;00:00" />
+    <meta name="cwps-meta-path-title" content="Why SkyCMS" />
+    <meta name="cwps-meta-author-info" content="{&#x27;Id&#x27;:&#x27;e2bdd627-b421-44dc-9ea7-952f76a56e79&#x27;,&#x27;AuthorName&#x27;:&#x27;eric@moonrise.net&#x27;,&#x27;AuthorDescription&#x27;:&#x27;&#x27;,&#x27;TwitterHandle&#x27;:null,&#x27;InstagramUrl&#x27;:null,&#x27;Website&#x27;:null,&#x27;EmailAddress&#x27;:null}" />
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SkyCMS - The High-Performance CMS Built for the Cloud</title>
+<link rel="stylesheet" href="../dist/tailwind.css" />
+<script>
+  tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                25: "#F7FBFE",
+                50: "#F1F9FE",
+                100: "#E2F2FC",
+                200: "#BEE6F9",
+                500: "#1CA2DB",
+                600: "#108CC9",
+                700: "#0D6797",
+                950: "#0C2F45",
+              },
+              gray: {
+                25: "#FDFDFD",
+                50: "#FAFAFA",
+                100: "#F5F5F5",
+                200: "#E9EAEB",
+                500: "#717680",
+                600: "#535862",
+                700: "#414651",
+                900: "#181D27",
+                950: "#0A0D12",
+              },
+            },
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+</script>
+<style>
+  body {
+    background-color: white;
+  }
+  /* Hero Section Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-background {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .hero-text {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpFadeIn 1s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .hero-image {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  /* Performance Section Animations */
+  @keyframes slideDownFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .performance-content {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .performance-content.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+  }
+
+  .performance-text {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .performance-text.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .performance-image {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .performance-image.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+
+  /* Blue Card Animations */
+  .blue-card {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .blue-card.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+  }
+
+  .blue-card-text {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .blue-card-text.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .blue-card-visual {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .blue-card-visual.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  /* Demanding Scenarios Section Animations */
+  @keyframes slideUpFadeInFast {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scenarios-title {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .scenarios-title.animate {
+    animation: slideUpFadeInFast 0.6s ease-out forwards;
+  }
+
+  .scenario-card {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .scenario-card.animate {
+    animation: slideUpFadeInFast 0.6s ease-out forwards;
+  }
+
+  .scenario-card:nth-child(1).animate {
+    animation-delay: 0.1s;
+  }
+
+  .scenario-card:nth-child(2).animate {
+    animation-delay: 0.2s;
+  }
+
+  .scenario-card:nth-child(3).animate {
+    animation-delay: 0.3s;
+  }
+
+  .scenario-card:nth-child(4).animate {
+    animation-delay: 0.5s;
+  }
+
+  .scenario-card:nth-child(5).animate {
+    animation-delay: 0.6s;
+  }
+
+  /* Competition Section Animation */
+  .competition-section {
+    opacity: 0;
+  }
+
+  .competition-section.animate {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  /* Pricing Section Animation */
+  .pricing-section {
+    opacity: 0;
+  }
+
+  .pricing-section.animate {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  /* Closing Section Animation */
+  .closing-logo {
+    opacity: 0;
+  }
+
+  .closing-logo.animate {
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+</style>
+<link rel="stylesheet" href="../assets/css/vendor/ckeditor5-content.css" />
+      <script>
+    // Overide settings
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              25: '#f0fdfa',
+              50: '#e6f7f3',
+              100: '#d0f0e8',
+              200: '#a3e0d2',
+              300: '#6fcfba',
+              400: '#4db8a0',
+              500: '#2f9d84',
+              600: '#28846f',
+              700: '#246b5b',
+              800: '#21564a',
+              900: '#1f483e',
+              950: '#0d2a24',
+            },
+            gray: {
+              25: '#fcfcfd',
+              50: '#f9fafb',
+              100: '#f2f4f7',
+              200: '#e4e7ec',
+              300: '#d0d5dd',
+              400: '#98a2b3',
+              500: '#667085',
+              600: '#475467',
+              700: '#344054',
+              800: '#1d2939',
+              900: '#101828',
+              950: '#0c111d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+    </head>
+<body>
+    <!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 pt-3 px-3 sm:px-4">
+  <div class="max-w-7xl mx-auto w-full">
+    <!-- Nav wrapper with white background, border and shadow -->
+    <div
+      class="bg-white rounded-2xl border border-gray-200 shadow-sm px-3 sm:px-4 pr-2 sm:pr-3 py-3 flex items-center justify-between min-w-0 w-full">
+      <!-- Logo -->
+      <a href='../index.html' class="flex items-center min-w-0 flex-shrink-0">
+        <div class="h-8 w-8 mr-2 sm:mr-3 flex-shrink-0">
+
+          <img
+                src="../assets/images/logomark.svg"
+                alt="SkyCMS Logo"
+                class="h-8 w-8"
+              />
+        </div>
+        <span
+              class="font-inter font-bold text-base sm:text-lg text-gray-950 whitespace-nowrap"
+              >SKY CMS</span>
+      </a>
+
+      <!-- Centered Navigation -->
+      <div class="hidden lg:flex items-center justify-center space-x-8 flex-1">
+        <!-- About -->
+        <a href="../docs/index.md" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Docs
+        </a>
+
+        <!-- Our competition -->
+        <a href="why-skycms.html" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Why Sky?
+        </a>
+
+        <!-- Our competition -->
+        <a href="sky-comparisons.html" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Comparisons
+        </a>
+
+        <!-- Features -->
+        <a href="features.html" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Features
+        </a>
+
+        <!-- Pricing -->
+        <a href="#pricing" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Pricing
+        </a>
+
+        <!-- Pricing -->
+        <a href="../README.md"
+          class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          GitHub
+        </a>
+      </div>
+
+      <!-- Right side - Mobile Menu Button only -->
+      <div class="flex items-center">
+        <!-- Mobile Menu Button -->
+        <button
+              class="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+              onclick="toggleMobileMenu()"
+              aria-label="Toggle mobile menu"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+  function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+</script>
+    
+  <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-50 to-white">
+      <div class="max-w-7xl mx-auto">
+        <span class="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">The case for SkyCMS</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">Static speed, CMS simplicity, edge delivery.</h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl">SkyCMS bridges the gap between what developers want (performance, simplicity, control) and what teams need (fast publishing, no technical friction). Here's why.</p>
+        <a href="../index.html" class="inline-block bg-brand-600 text-white px-6 py-3 rounded-lg hover:bg-brand-700 transition-colors font-medium">Explore SkyCMS</a>
+      </div>
+    </section>
+
+    <!-- The Core Problem Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">The Core Problem</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Static sites are fast, but publishing is slow.</h3>
+            <p class="text-gray-600 mb-4">Modern web teams understand that static content + edge delivery + CDN caching delivers the best performance. But getting there means:</p>
+            <ul class="text-gray-600 space-y-2 ml-4 list-disc">
+              <li>Building and maintaining frontend systems</li>
+              <li>Creating content workflows tied to Git</li>
+              <li>Running CI/CD pipelines for every content change</li>
+              <li>Managing build times and deploy queues</li>
+              <li>Making editors learn developer tooling</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Traditional CMSs are user-friendly, but slow.</h3>
+            <p class="text-gray-600 mb-4">WordPress, Drupal, and similar platforms make publishing easy for non-developers. But they often come with:</p>
+            <ul class="text-gray-600 space-y-2 ml-4 list-disc">
+              <li>Plugin overhead and performance complexity</li>
+              <li>Runtime rendering bottlenecks</li>
+              <li>Scaling challenges without optimization work</li>
+              <li>Platform lock-in and upgrade pressure</li>
+              <li>Complex infrastructure requirements</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three Pillars Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">The SkyCMS Difference: Three Pillars</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-brand-25 rounded-2xl border border-gray-200 shadow-sm p-6">
+            <h3 class="text-xl font-bold text-brand-600 mb-3">1. Static Speed</h3>
+            <p class="text-gray-600 mb-4">Pages are delivered as static assets via edge/CDN—guaranteeing sub-second load times, minimal origin load, and resilience at global scale.</p>
+            <ul class="text-gray-600 space-y-2 ml-4 list-disc">
+              <li>No runtime rendering</li>
+              <li>Origin-less delivery (Cloudflare R2 + Rules)</li>
+              <li>HTTP caching by default</li>
+              <li>Multi-cloud support (Azure, AWS, R2)</li>
+            </ul>
+          </div>
+          <div class="bg-brand-25 rounded-2xl border border-gray-200 shadow-sm p-6">
+            <h3 class="text-xl font-bold text-brand-600 mb-3">2. CMS Simplicity</h3>
+            <p class="text-gray-600 mb-4">Publishing is straightforward for everyone—editors use WYSIWYG + visual tools, developers have code when needed.</p>
+            <ul class="text-gray-600 space-y-2 ml-4 list-disc">
+              <li>CKEditor 5 for rich text</li>
+              <li>GrapesJS for visual page building</li>
+              <li>Monaco for code-based customization</li>
+              <li>Built-in versioning and rollback</li>
+            </ul>
+          </div>
+          <div class="bg-brand-25 rounded-2xl border border-gray-200 shadow-sm p-6">
+            <h3 class="text-xl font-bold text-brand-600 mb-3">3. Edge Delivery</h3>
+            <p class="text-gray-600 mb-4">Publish complete pages in &lt;5 seconds—no build pipelines, no Git workflows, no deploy queues.</p>
+            <ul class="text-gray-600 space-y-2 ml-4 list-disc">
+              <li>&lt;5s publish time</li>
+              <li>No CI/CD or build tools required</li>
+              <li>Publishing is the unit of work</li>
+              <li>Instant rollback for content teams</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+    <!-- Why Developers Should Care Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Why Developers Should Care</h2>
+        
+        <!-- Subsection 1 -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">1. Simplifies Your Architecture</h3>
+          <p class="text-gray-600 mb-6">You don't have to choose between performance and developer experience. SkyCMS owns the publishing workflow—so you can focus on what makes your product unique.</p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+              <h4 class="text-lg font-bold text-gray-900 mb-3">No build pipeline debt.</h4>
+              <p class="text-gray-600">Skip maintaining Git → CI/CD → deploy toolchains for content. Content publishing is the CMS's job; your infrastructure stays simple.</p>
+            </div>
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+              <h4 class="text-lg font-bold text-gray-900 mb-3">No frontend framework bloat for simple pages.</h4>
+              <p class="text-gray-600">If you're building a marketing site, documentation, or content hub, you don't need React/Next.js/Gatsby. Static pages + edge delivery is enough.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subsection 2 -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">2. Reduces Operational Complexity</h3>
+          <p class="text-gray-600 mb-6">Fewer moving parts means fewer things to own, monitor, and scale.</p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+              <h4 class="text-lg font-bold text-gray-900 mb-3">No plugin ecosystem to maintain.</h4>
+              <p class="text-gray-600">WordPress solutions often require multiple plugins (caching, image optimization, performance) that conflict and need updates. SkyCMS has performance built in.</p>
+            </div>
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+              <h4 class="text-lg font-bold text-gray-900 mb-3">Multi-cloud without lock-in.</h4>
+              <p class="text-gray-600">Deploy to Azure Blob, S3, R2, or any S3-compatible storage. Change your infrastructure without rebuilding your publishing system.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subsection 3 -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">3. Aligns Performance with Shipping</h3>
+          <p class="text-gray-600 mb-6">Performance isn't a separate optimization layer—it's the default. Every publish goes live at edge speed.</p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+              <h4 class="text-lg font-bold text-gray-900 mb-3">Fast feedback loops.</h4>
+              <p class="text-gray-600">Editors see changes live in seconds. Small updates don't ride full release processes. Your team stays in sync with real-time results.</p>
+            </div>
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+              <h4 class="text-lg font-bold text-gray-900 mb-3">Measurable outcomes.</h4>
+              <p class="text-gray-600">Faster publishing → faster iteration → better content velocity. You can prove the value to stakeholders with real metrics.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subsection 4 -->
+        <div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">4. Keeps Development Flexibility</h3>
+          <p class="text-gray-600 mb-6">You're not locked into one way of working—choose static, dynamic, decoupled, or API-driven as your needs change.</p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+              <h4 class="text-lg font-bold text-gray-900 mb-3">Static by default, dynamic when needed.</h4>
+              <p class="text-gray-600">Start with static pages. Add dynamic rendering when you need real-time data. Switch architectures without rebuilding the CMS layer.</p>
+            </div>
+            <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+              <h4 class="text-lg font-bold text-gray-900 mb-3">Optional API layer.</h4>
+              <p class="text-gray-600">If you need a headless model for multi-platform distribution, SkyCMS supports it. But you're not forced to treat every website change as a release.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SkyCMS vs Alternatives Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">SkyCMS vs. The Alternatives</h2>
+        <p class="text-gray-600 mb-8 text-center">How SkyCMS stacks up against common approaches teams use today.</p>
+        
+        <div class="space-y-4">
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 grid md:grid-cols-3 gap-4">
+            <div><span class="font-bold text-gray-900">WordPress/Drupal</span></div>
+            <div>
+              <p class="text-gray-600 text-sm"><span class="text-brand-600 font-medium">SkyCMS wins on:</span> Performance, simplicity, no plugin overhead, fast publishing</p>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm"><span class="text-brand-600 font-medium">Trade-off:</span> Less mature, fewer third-party integrations (early stage)</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 grid md:grid-cols-3 gap-4">
+            <div><span class="font-bold text-gray-900">Static Generators (Jekyll/Hugo/Gatsby)</span></div>
+            <div>
+              <p class="text-gray-600 text-sm"><span class="text-brand-600 font-medium">SkyCMS wins on:</span> Editor-friendly publishing, no Git workflows, faster feedback</p>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm"><span class="text-brand-600 font-medium">Trade-off:</span> Less customization for complex content models vs. SSG flexibility</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 grid md:grid-cols-3 gap-4">
+            <div><span class="font-bold text-gray-900">Git-based Platforms (Netlify/CloudCannon)</span></div>
+            <div>
+              <p class="text-gray-600 text-sm"><span class="text-brand-600 font-medium">SkyCMS wins on:</span> Publish speed (&lt;5s vs. build times), no Git repo requirement, direct editor publishing</p>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm"><span class="text-brand-600 font-medium">Trade-off:</span> Less code review overhead (may be desired for content-focused teams)</p>
+            </div>
+          </div>
+
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 grid md:grid-cols-3 gap-4">
+            <div><span class="font-bold text-gray-900">Headless CMSs (Contentful/Strapi)</span></div>
+            <div>
+              <p class="text-gray-600 text-sm"><span class="text-brand-600 font-medium">SkyCMS wins on:</span> Complete pages (not just APIs), no frontend framework required, simpler deployment</p>
+            </div>
+            <div>
+              <p class="text-gray-600 text-sm"><span class="text-brand-600 font-medium">Trade-off:</span> Less flexible for multi-channel distribution (design trade-off)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Should Use SkyCMS Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Who Should Use SkyCMS</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Content-driven teams</h3>
+            <p class="text-gray-600">Marketing sites, documentation hubs, blogs, news platforms. Teams that publish frequently and need editors + developers to work together.</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Performance-conscious organizations</h3>
+            <p class="text-gray-600">Teams that care about Core Web Vitals, SEO, and user experience. Tired of fighting performance with caching plugins or complex toolchains.</p>
+          </div>
+          <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Developers building for teams</h3>
+            <p class="text-gray-600">Agencies and consultants who need a CMS that doesn't require ongoing support/maintenance, and that integrates cleanly with modern dev practices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Reality Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center">The Technical Reality</h2>
+        <p class="text-gray-600 mb-8 text-center">SkyCMS's core strengths come from architectural choices:</p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Static + edge is proven.</h3>
+            <p class="text-gray-600">Cloudflare R2, AWS CloudFront, and Azure CDN all validate that edge delivery is the fastest, most reliable pattern for web content. SkyCMS bakes this in from the start.</p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">No build pipeline = no queue.</h3>
+            <p class="text-gray-600">DORA research shows that working in small batches and reducing deployment time drive higher software delivery performance. SkyCMS applies this to publishing.</p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Versioning in the CMS = simpler operations.</h3>
+            <p class="text-gray-600">Content versioning and rollback don't depend on Git commits or deployment artifacts. Editors have instant control.</p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6">
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Multi-cloud flexibility = no lock-in.</h3>
+            <p class="text-gray-600">S3, Azure Blob, R2 are all standard. You choose your infrastructure without rebuilding your publishing system.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Now Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Now?</h2>
+        <p class="text-gray-600 mb-6">The tools and infrastructure for edge-native publishing have matured:</p>
+        <ul class="text-gray-600 space-y-3 ml-4 list-disc">
+          <li><span class="font-medium text-gray-900">CDN ubiquity:</span> Edge hosting is fast and affordable at global scale.</li>
+          <li><span class="font-medium text-gray-900">Object storage commoditization:</span> S3, Azure Blob, R2 are available everywhere; pricing is competitive.</li>
+          <li><span class="font-medium text-gray-900">Publishing demand:</span> Teams publish more frequently than ever. Content velocity matters.</li>
+          <li><span class="font-medium text-gray-900">Editor expectations:</span> Non-developers expect intuitive, fast tools (WYSIWYG editors, visual builders are table stakes).</li>
+          <li><span class="font-medium text-gray-900">Performance metrics:</span> Google Core Web Vitals are now part of search rankings. Performance is no longer optional.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-50 to-white">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Getting Started</h2>
+        <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Ready to try SkyCMS? It's free for self-hosting and built for both small projects and scaling teams.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../index.html" class="bg-brand-600 text-white px-6 py-3 rounded-lg hover:bg-brand-700 transition-colors font-medium">Launch Free</a>
+          <a href="../index.html" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">View Demo</a>
+        </div>
+      </div>
+    </section>
+  </section></main>
+
+    <!-- Footer -->
+    <footer
+      class="relative bg-white border-gray-200 mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-9 overflow-hidden"
+    >
+      <!-- Background Image with proper spacing -->
+      <div
+        class="absolute inset-0 mt-8 mx-4 lg:mx-9 rounded-2xl"
+        style="
+          background-image: url('/pub/articles/1/HeroBackground.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      ></div>
+      <div class="relative">
+        <!-- Main Footer Content -->
+        <div class="text-center mb-8 mt-9">
+          <!-- Logo -->
+          <div class="flex items-center justify-center space-x-3 mb-8">
+            <div class="h-8 w-8 flex-shrink-0">
+              <img
+                src="../assets/images/logomark.svg"
+                alt="SkyCMS Logo"
+                class="h-8 w-8"
+              />
+            </div>
+            <span class="font-inter font-bold text-lg text-gray-950"
+              >SKY CMS</span
+            >
+          </div>
+
+          <!-- Footer Links -->
+          <div class="flex flex-wrap justify-center gap-6 lg:gap-8 mb-8">
+            <a
+              href="#overview"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Overview</a
+            >
+            <a
+              href="#features"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Features</a
+            >
+            <a
+              href="#pricing"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Pricing</a
+            >
+            <a
+              href="#careers"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Careers</a
+            >
+            <a
+              href="#help"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Help</a
+            >
+            <a
+              href="#privacy"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Privacy</a
+            >
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-950 pt-8 mx-28">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-gray-950 font-inter">
+              © 2024 SkyCMS. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#terms"
+                class="text-gray-950 hover:text-gray-900 font-inter"
+                >Terms</a
+              >
+              <a
+                href="#privacy"
+                class="text-gray-950 hover:text-gray-900 font-inter"
+                >Privacy</a
+              >
+              <a
+                href="#cookies"
+                class="text-gray-950 hover:text-gray-900 font-inter"
+                >Cookies</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden lg:hidden">
+      <div class="fixed top-16 left-0 right-0 z-40 mx-3 sm:mx-4">
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-lg p-4">
+          <nav class="space-y-3">
+            <a
+              href="#about"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="#our-competition"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >Our competition</a
+            >
+            <a
+              href="#features"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >Features</a
+            >
+            <a
+              href="#pricing"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >Pricing</a
+            >
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("mobile-menu");
+        const menuButton = event.target.closest(
+          '[onclick="toggleMobileMenu()"]'
+        );
+        const menuContent = event.target.closest("#mobile-menu");
+
+        if (!menuButton && !menuContent && !menu.classList.contains("hidden")) {
+          menu.classList.add("hidden");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Close mobile menu when clicking on navigation links
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          toggleMobileMenu();
+        });
+      });
+
+      // Performance Section Scroll Animation
+      function initPerformanceAnimation() {
+        const performanceElements = document.querySelectorAll(
+          ".performance-content, .performance-text, .performance-image, .blue-card, .blue-card-text, .blue-card-visual"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        performanceElements.forEach((element) => {
+          observer.observe(element);
+        });
+      }
+
+      // Demanding Scenarios Section Scroll Animation
+      function initScenariosAnimation() {
+        const scenarioElements = document.querySelectorAll(
+          ".scenarios-title, .scenario-card"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        scenarioElements.forEach((element) => {
+          observer.observe(element);
+        });
+      }
+
+      // Competition Section Scroll Animation
+      function initCompetitionAnimation() {
+        const competitionSection = document.querySelector(
+          ".competition-section"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        if (competitionSection) {
+          observer.observe(competitionSection);
+        }
+      }
+
+      // Pricing Section Scroll Animation
+      function initPricingAnimation() {
+        const pricingSection = document.querySelector(".pricing-section");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        if (pricingSection) {
+          observer.observe(pricingSection);
+        }
+      }
+
+      // Closing Section Scroll Animation
+      function initClosingAnimation() {
+        const closingLogo = document.querySelector(".closing-logo");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        if (closingLogo) {
+          observer.observe(closingLogo);
+        }
+      }
+
+      // Initialize animations when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        initPerformanceAnimation();
+        initScenariosAnimation();
+        initCompetitionAnimation();
+        initPricingAnimation();
+        initClosingAnimation();
+
+        // Pricing Tab Functionality
+        const monthlyTab = document.getElementById("monthly-tab");
+        const yearlyTab = document.getElementById("yearly-tab");
+        const professionalPrice = document.getElementById("professional-price");
+        const professionalBillingText = document.getElementById(
+          "professional-billing-text"
+        );
+        const savingsMessage = document.getElementById("savings-message");
+        const professionalCustomDomains = document.getElementById(
+          "professional-custom-domains"
+        );
+        const professionalMonthlyButton = document.getElementById(
+          "professional-monthly-button"
+        );
+        const professionalYearlyButton = document.getElementById(
+          "professional-yearly-button"
+        );
+
+        // Current state
+        let currentBilling = "monthly"; // Default to monthly billing
+
+        // Update pricing display
+        function updatePricing() {
+          if (!professionalPrice) return;
+
+          const price = professionalPrice.getAttribute(
+            `data-${currentBilling}`
+          );
+          professionalPrice.textContent = price;
+
+          if (currentBilling === "monthly") {
+            if (professionalBillingText)
+              professionalBillingText.textContent = "per month";
+            if (savingsMessage) savingsMessage.classList.add("hidden");
+            if (professionalCustomDomains)
+              professionalCustomDomains.innerHTML =
+                "Custom domain +<br />TLS/SSL certificate";
+            // Show monthly button, hide yearly button
+            if (professionalMonthlyButton)
+              professionalMonthlyButton.classList.remove("hidden");
+            if (professionalYearlyButton)
+              professionalYearlyButton.classList.add("hidden");
+          } else {
+            if (professionalBillingText)
+              professionalBillingText.textContent = "per month (billed yearly)";
+            if (savingsMessage) savingsMessage.classList.remove("hidden");
+            if (professionalCustomDomains)
+              professionalCustomDomains.innerHTML =
+                "Custom domain +<br />TLS/SSL certificate";
+            // Show yearly button, hide monthly button
+            if (professionalMonthlyButton)
+              professionalMonthlyButton.classList.add("hidden");
+            if (professionalYearlyButton)
+              professionalYearlyButton.classList.remove("hidden");
+          }
+        }
+
+        // Billing cycle tab handlers
+        if (monthlyTab) {
+          monthlyTab.addEventListener("click", function () {
+            currentBilling = "monthly";
+
+            // Update tab styles
+            monthlyTab.classList.add("bg-brand-600", "text-white");
+            monthlyTab.classList.remove("bg-white", "text-gray-700");
+
+            yearlyTab.classList.remove("bg-brand-600", "text-white");
+            yearlyTab.classList.add("bg-white", "text-gray-700");
+
+            updatePricing();
+            updateMobileProfessionalPricing();
+          });
+        }
+
+        if (yearlyTab) {
+          yearlyTab.addEventListener("click", function () {
+            currentBilling = "yearly";
+
+            // Update tab styles
+            yearlyTab.classList.add("bg-brand-600", "text-white");
+            yearlyTab.classList.remove("bg-white", "text-gray-700");
+
+            monthlyTab.classList.remove("bg-brand-600", "text-white");
+            monthlyTab.classList.add("bg-white", "text-gray-700");
+
+            updatePricing();
+            updateMobileProfessionalPricing();
+          });
+        }
+
+        // Initialize pricing display
+        updatePricing();
+
+        // Mobile Products Tab Functionality
+        const freeTab = document.getElementById("free-tab");
+        const professionalTab = document.getElementById("professional-tab");
+        const customTab = document.getElementById("custom-tab");
+
+        // Plan cards
+        const freePlanCard = document.getElementById("free-plan-card");
+        const professionalPlanCard = document.getElementById(
+          "professional-plan-card"
+        );
+        const customPlanCard = document.getElementById("custom-plan-card");
+
+        // Mobile professional pricing elements
+        const mobileProfessionalPrice = document.getElementById(
+          "mobile-professional-price"
+        );
+        const mobileProfessionalBillingText = document.getElementById(
+          "mobile-professional-billing-text"
+        );
+        const mobileSavingsMessage = document.getElementById(
+          "mobile-savings-message"
+        );
+        const mobileProfessionalMonthlyButton = document.getElementById(
+          "mobile-professional-monthly-button"
+        );
+        const mobileProfessionalYearlyButton = document.getElementById(
+          "mobile-professional-yearly-button"
+        );
+
+        let currentPlan = "professional"; // Default to professional
+
+        // Update mobile professional pricing based on billing cycle
+        function updateMobileProfessionalPricing() {
+          if (!mobileProfessionalPrice) return;
+
+          if (currentBilling === "yearly") {
+            mobileProfessionalPrice.textContent = "20";
+            if (mobileProfessionalBillingText) {
+              mobileProfessionalBillingText.textContent =
+                "per month (billed yearly)";
+            }
+            if (mobileSavingsMessage) {
+              mobileSavingsMessage.classList.remove("hidden");
+            }
+            if (mobileProfessionalMonthlyButton) {
+              mobileProfessionalMonthlyButton.classList.add("hidden");
+            }
+            if (mobileProfessionalYearlyButton) {
+              mobileProfessionalYearlyButton.classList.remove("hidden");
+            }
+          } else {
+            mobileProfessionalPrice.textContent = "25";
+            if (mobileProfessionalBillingText) {
+              mobileProfessionalBillingText.textContent = "per month";
+            }
+            if (mobileSavingsMessage) {
+              mobileSavingsMessage.classList.add("hidden");
+            }
+            if (mobileProfessionalMonthlyButton) {
+              mobileProfessionalMonthlyButton.classList.remove("hidden");
+            }
+            if (mobileProfessionalYearlyButton) {
+              mobileProfessionalYearlyButton.classList.add("hidden");
+            }
+          }
+        }
+
+        // Show plan card based on selection
+        function showPlanCard(plan) {
+          // Hide all cards
+          if (freePlanCard) freePlanCard.classList.add("hidden");
+          if (professionalPlanCard)
+            professionalPlanCard.classList.add("hidden");
+          if (customPlanCard) customPlanCard.classList.add("hidden");
+
+          // Show selected card
+          if (plan === "free" && freePlanCard) {
+            freePlanCard.classList.remove("hidden");
+          } else if (plan === "professional" && professionalPlanCard) {
+            professionalPlanCard.classList.remove("hidden");
+            updateMobileProfessionalPricing();
+          } else if (plan === "custom" && customPlanCard) {
+            customPlanCard.classList.remove("hidden");
+          }
+
+          currentPlan = plan;
+        }
+
+        // Update tab styles
+        function updateTabStyles(activeTab) {
+          if (!activeTab) return;
+
+          // Reset all tabs
+          [freeTab, professionalTab, customTab].forEach((tab) => {
+            if (tab) {
+              tab.classList.remove("bg-brand-600", "text-white");
+              tab.classList.add("bg-white", "text-gray-700");
+            }
+          });
+
+          // Style active tab
+          activeTab.classList.add("bg-brand-600", "text-white");
+          activeTab.classList.remove("bg-white", "text-gray-700");
+        }
+
+        // Tab click handlers
+        if (freeTab) {
+          freeTab.addEventListener("click", function () {
+            updateTabStyles(freeTab);
+            showPlanCard("free");
+          });
+        }
+
+        if (professionalTab) {
+          professionalTab.addEventListener("click", function () {
+            updateTabStyles(professionalTab);
+            showPlanCard("professional");
+          });
+        }
+
+        if (customTab) {
+          customTab.addEventListener("click", function () {
+            updateTabStyles(customTab);
+            showPlanCard("custom");
+          });
+        }
+
+        // Initialize - show professional plan by default and set tab style
+        if (professionalTab) {
+          updateTabStyles(professionalTab);
+          showPlanCard("professional");
+        }
+      });
+    </script>
+    
+</body>
+</html>

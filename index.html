@@ -1,137 +1,1414 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyCMS - Tailwind CSS Demo</title>
-    
-    <!-- Link to the compiled Tailwind CSS -->
-    <link rel="stylesheet" href="dist/tailwind.css">
-    
-    <!-- Google Fonts for custom families -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body class="bg-gray-50 font-roboto">
+    <title>SkyCMS</title>
+    <meta property="og:title" content="SkyCMS" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="" />
+    <meta property="article:modified_time" content="2025-12-13 19:30:56Z">
+    <meta name="cwps-meta-path-url" content="root" />
+    <meta name="cwps-meta-path-updated" content="12/13/2025 19:30:56 &#x2B;00:00" />
+    <meta name="cwps-meta-path-title" content="SkyCMS" />
+    <meta name="cwps-meta-author-info" content="{&#x27;Id&#x27;:&#x27;e2bdd627-b421-44dc-9ea7-952f76a56e79&#x27;,&#x27;AuthorName&#x27;:&#x27;eric@moonrise.net&#x27;,&#x27;AuthorDescription&#x27;:&#x27;&#x27;,&#x27;TwitterHandle&#x27;:null,&#x27;InstagramUrl&#x27;:null,&#x27;Website&#x27;:null,&#x27;EmailAddress&#x27;:null}" />
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SkyCMS - The High-Performance CMS Built for the Cloud</title>
+<link rel="stylesheet" href="dist/tailwind.css" />
+<script>
+  tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                25: "#F7FBFE",
+                50: "#F1F9FE",
+                100: "#E2F2FC",
+                200: "#BEE6F9",
+                500: "#1CA2DB",
+                600: "#108CC9",
+                700: "#0D6797",
+                950: "#0C2F45",
+              },
+              gray: {
+                25: "#FDFDFD",
+                50: "#FAFAFA",
+                100: "#F5F5F5",
+                200: "#E9EAEB",
+                500: "#717680",
+                600: "#535862",
+                700: "#414651",
+                900: "#181D27",
+                950: "#0A0D12",
+              },
+            },
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+</script>
+<style>
+  body {
+    background-color: white;
+  }
+  /* Hero Section Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-background {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .hero-text {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpFadeIn 1s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .hero-image {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  /* Performance Section Animations */
+  @keyframes slideDownFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .performance-content {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .performance-content.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+  }
+
+  .performance-text {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .performance-text.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .performance-image {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .performance-image.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+
+  /* Blue Card Animations */
+  .blue-card {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .blue-card.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+  }
+
+  .blue-card-text {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .blue-card-text.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .blue-card-visual {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .blue-card-visual.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  /* Demanding Scenarios Section Animations */
+  @keyframes slideUpFadeInFast {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scenarios-title {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .scenarios-title.animate {
+    animation: slideUpFadeInFast 0.6s ease-out forwards;
+  }
+
+  .scenario-card {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .scenario-card.animate {
+    animation: slideUpFadeInFast 0.6s ease-out forwards;
+  }
+
+  .scenario-card:nth-child(1).animate {
+    animation-delay: 0.1s;
+  }
+
+  .scenario-card:nth-child(2).animate {
+    animation-delay: 0.2s;
+  }
+
+  .scenario-card:nth-child(3).animate {
+    animation-delay: 0.3s;
+  }
+
+  .scenario-card:nth-child(4).animate {
+    animation-delay: 0.5s;
+  }
+
+  .scenario-card:nth-child(5).animate {
+    animation-delay: 0.6s;
+  }
+
+  /* Competition Section Animation */
+  .competition-section {
+    opacity: 0;
+  }
+
+  .competition-section.animate {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  /* Pricing Section Animation */
+  .pricing-section {
+    opacity: 0;
+  }
+
+  .pricing-section.animate {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  /* Closing Section Animation */
+  .closing-logo {
+    opacity: 0;
+  }
+
+  .closing-logo.animate {
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+</style>
+<link rel="stylesheet" href="assets/css/vendor/ckeditor5-content.css" />
+    <style>
+    /* Hero Section Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUpFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-background {
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    .hero-text {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideUpFadeIn 1s ease-out forwards;
+      animation-delay: 0.2s;
+    }
+
+    .fade {
+      transition: opacity 700ms ease-in-out;
+      opacity: 1;
+    }
+    .fade.hidden { 
+      opacity: 0;
+    }
+
+    .rotation-title {
+      min-height: 1.2em; 
+      display: inline-block;
+    }
+
+    .rotation-tagline {
+      min-height: 1.2em;
+      display: inline-block;
+    }
+
+    /* Fixed height container to prevent layout shift during rotation */
+    .hero-heading-container {
+      min-height: 100px;
+    }
+    @media (min-width: 640px) {
+      .hero-heading-container {
+        min-height: 110px;
+      }
+    }
+    @media (min-width: 1024px) {
+      .hero-heading-container {
+        min-height: 130px;
+      }
+    }
+  </style>
+    </head>
+<body>
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-brand-500 font-montserrat">SkyCMS</div>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#" class="text-gray-700 hover:text-brand-600 transition">Home</a>
-                    <a href="#" class="text-gray-700 hover:text-brand-600 transition">Features</a>
-                    <a href="#" class="text-gray-700 hover:text-brand-600 transition">About</a>
-                    <a href="#" class="text-gray-700 hover:text-brand-600 transition">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<nav class="fixed top-0 left-0 right-0 z-50 pt-3 px-3 sm:px-4">
+  <div class="max-w-7xl mx-auto w-full">
+    <!-- Nav wrapper with white background, border and shadow -->
+    <div
+      class="bg-white rounded-2xl border border-gray-200 shadow-sm px-3 sm:px-4 pr-2 sm:pr-3 py-3 flex items-center justify-between min-w-0 w-full">
+      <!-- Logo -->
+      <a href='/' class="flex items-center min-w-0 flex-shrink-0">
+        <div class="h-8 w-8 mr-2 sm:mr-3 flex-shrink-0">
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-brand-500 to-brand-700 text-white py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-5xl font-bold mb-4 font-montserrat animate-float">Welcome to SkyCMS</h1>
-            <p class="text-xl mb-8 font-roboto">A powerful content management system built with custom brand colors and animations</p>
-            <div class="space-x-4">
-                <button class="bg-white text-brand-600 font-bold py-3 px-8 rounded-lg hover:bg-accent-100 transition font-montserrat">
-                    Get Started
-                </button>
-                <button class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-brand-600 transition font-montserrat">
-                    Learn More
-                </button>
-            </div>
+          <img
+                src="assets/images/logomark.svg"
+                alt="SkyCMS Logo"
+                class="h-8 w-8"
+              />
         </div>
-    </section>
+        <span
+              class="font-inter font-bold text-base sm:text-lg text-gray-950 whitespace-nowrap"
+              >SKY CMS</span>
+      </a>
 
-    <!-- Features Section -->
-    <section class="py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-brand-700 mb-12 font-montserrat">Features</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition border-l-4 border-brand-500 animate-slide-in-left">
-                    <div class="text-accent-500 text-4xl mb-4">🚀</div>
-                    <h3 class="text-xl font-bold text-brand-700 mb-2 font-montserrat">Fast Performance</h3>
-                    <p class="text-gray-600">Lightning-fast load times and optimized for maximum performance.</p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition border-l-4 border-accent-400">
-                    <div class="text-accent-500 text-4xl mb-4">🎨</div>
-                    <h3 class="text-xl font-bold text-brand-700 mb-2 font-montserrat">Beautiful Design</h3>
-                    <p class="text-gray-600">Modern, responsive designs with custom brand colors.</p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition border-l-4 border-brand-600 animate-slide-in-right">
-                    <div class="text-brand-600 text-4xl mb-4">🔒</div>
-                    <h3 class="text-xl font-bold text-brand-700 mb-2 font-montserrat">Secure</h3>
-                    <p class="text-gray-600">Enterprise-grade security to keep your content safe.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <!-- Centered Navigation -->
+      <div class="hidden lg:flex items-center justify-center space-x-8 flex-1">
+        <!-- About -->
+        <a href="docs/index.md" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Docs
+        </a>
 
-    <!-- Content Section -->
-    <section class="bg-white py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold text-brand-700 mb-4 font-montserrat">Powerful Content Management</h2>
-                    <p class="text-gray-600 mb-4 font-inter">
-                        SkyCMS provides all the tools you need to manage your content efficiently. 
-                        From simple pages to complex data structures, we've got you covered.
-                    </p>
-                    <ul class="space-y-2">
-                        <li class="flex items-center text-gray-700">
-                            <span class="text-brand-500 mr-2 font-bold">✓</span>
-                            Easy-to-use interface
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <span class="text-brand-500 mr-2 font-bold">✓</span>
-                            Custom content types
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <span class="text-brand-500 mr-2 font-bold">✓</span>
-                            Media management
-                        </li>
-                        <li class="flex items-center text-gray-700">
-                            <span class="text-brand-500 mr-2 font-bold">✓</span>
-                            API-first architecture
-                        </li>
-                    </ul>
-                </div>
-                <div class="bg-gradient-to-br from-brand-100 to-brand-200 rounded-lg p-8 text-center shadow-lg">
-                    <div class="text-6xl mb-4 animate-float">📊</div>
-                    <p class="text-brand-700 font-semibold font-montserrat">Dashboard Preview</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- Our competition -->
+        <a href="samples/why-skycms.html" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Why Sky?
+        </a>
 
-    <!-- CTA Section -->
-    <section class="bg-gradient-to-r from-brand-600 to-brand-700 text-white py-16">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold mb-4 font-montserrat">Ready to Get Started?</h2>
-            <p class="text-xl mb-8 font-inter">Join thousands of users who trust SkyCMS for their content management needs.</p>
-            <button class="bg-white text-brand-600 font-bold py-3 px-8 rounded-lg hover:bg-accent-100 transition font-montserrat shadow-lg">
-                Start Your Free Trial
+        <!-- Our competition -->
+        <a href="samples/sky-comparisons.html" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Comparisons
+        </a>
+
+        <!-- Features -->
+        <a href="samples/features.html" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Features
+        </a>
+
+        <!-- Pricing -->
+        <a href="#pricing" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Pricing
+        </a>
+
+        <!-- Pricing -->
+        <a href="README.md"
+          class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          GitHub
+        </a>
+      </div>
+
+      <!-- Right side - Mobile Menu Button only -->
+      <div class="flex items-center">
+        <!-- Mobile Menu Button -->
+        <button
+              class="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+              onclick="toggleMobileMenu()"
+              aria-label="Toggle mobile menu"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
             </button>
-        </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+  function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+</script>
+    <!-- Hero Section -->
+<section class="relative pt-24 lg:pt-36 pb-16 lg:pb-24 bg-white overflow-hidden mx-auto px-4 sm:px-6 lg:px-8">
+  <!-- Background Image -->
+  <div class="absolute inset-0 mt-8 mx-4 lg:mx-9 rounded-2xl hero-background" style="background-image: url('assets/images/hero-background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  </div>
+  <div class="relative w-full">
+    <div class="text-center max-w-5xl mx-auto w-full hero-text">
+      <!-- Prominent SkyCMS branding -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-montserrat font-bold leading-tight tracking-tight mb-8 px-2">
+        <span class="text-brand-600">SkyCMS</span><span class="text-gray-950">:</span>
+        <span class="text-gray-950">The Edge-Native CMS</span>
+      </h1>
 
+      <!-- Rotating audience titles -->
+      <div id="learn-more" class="hero-heading-container" data-href="samples/why-skycms.html" onclick="learnMore(this)" title="Click to learn more.">
+        <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-montserrat font-bold leading-tight mb-2 px-2">
+          <span class="text-brand-700 rotation-title fade transition-opacity duration-700 opacity-10" id="rotation-title">For Content Creators & Editors</span>
+        </p>
+        <p class="text-lg sm:text-xl md:text-2xl lg:text-3xl font-inter font-semibold text-gray-700 rotation-tagline fade mb-2 transition-opacity duration-700 opacity-10" id="rotation-tagline">WYSIWYG Editing. Visual Page Building.</p>
+        <br>
+        <button id="rotation-learnmore-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 rounded-full transition-opacity duration-700 opacity-10">
+          Click to learn more
+        </button>
+      </div>
+
+      <p class="text-base sm:text-lg lg:text-xl font-inter font-medium text-brand-950 leading-relaxed mb-8 lg:mb-12 max-w-4xl mx-auto mt-6">
+        No Build Pipeline · Free for self-hosting · Multi-cloud deployment
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <a href="#get-started" class="inline-flex items-center px-6 py-3 bg-brand-600 text-white font-semibold rounded-lg hover:bg-brand-700 transition-colors">Launch
+          Free</a>
+        <a href="#demo" class="inline-flex items-center px-6 py-3 bg-white border border-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">View
+          Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-16 lg:py-24 bg-white mx-auto px-4 sm:px-6 lg:px-28" id="features">
+  <h2 class="text-3xl lg:text-4xl font-montserrat font-semibold text-gray-950 mb-4">Why Teams Switch to SkyCMS</h2>
+  <p class="text-gray-500 font-inter text-base mb-8">Static speed, CMS simplicity, and edge delivery—without Git, CI/CD,
+    or build tools.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">No Build Pipelines</h3>
+      <p class="text-gray-500">Publisher renders and deploys directly—skip Git-based SSG builds and long queues.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Editor-Friendly</h3>
+      <p class="text-gray-500">CKEditor 5 and GrapesJS deliver WYSIWYG + visual page building; zero code required.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Developer-Ready</h3>
+      <p class="text-gray-500">Monaco code editor, templates, and hybrid static/dynamic modes for custom work.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Edge Performance</h3>
+      <p class="text-gray-500">Origin-less static hosting on Cloudflare R2 + Rules; sub-second global delivery.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Multi-Cloud</h3>
+      <p class="text-gray-500">Deploy to Azure Blob, S3/R2, or any S3-compatible storage; no lock-in.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Versioned & Instant</h3>
+      <p class="text-gray-500">Built-in versioning, scheduling, and instant rollback—publish in seconds.</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 lg:py-24 bg-white mx-auto px-4 sm:px-6 lg:px-28" id="modes">
+  <h2 class="text-3xl lg:text-4xl font-montserrat font-semibold text-gray-950 mb-4">Choose Your Mode</h2>
+  <p class="text-gray-500 font-inter text-base mb-8">Static for speed, dynamic when needed, decoupled for flexibility,
+    optional API for headless.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Static (Primary)</h3>
+      <p class="text-gray-500">Automatic static generation, edge-hosted, CDN-first delivery.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Dynamic</h3>
+      <p class="text-gray-500">Server-rendered pages from the Publisher app when real-time data matters.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Decoupled</h3>
+      <p class="text-gray-500">Editor and Publisher separated for near-static speed with backend capability.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">API Optional</h3>
+      <p class="text-gray-500">REST API for headless distribution when you need structured content delivery.</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 lg:py-24 bg-white mx-auto px-4 sm:px-6 lg:px-28" id="proof">
+  <h2 class="text-3xl lg:text-4xl font-montserrat font-semibold text-gray-950 mb-4">Real-World Impact</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">&lt; 5s Publish</h3>
+      <p class="text-gray-500">Single page updates go live in seconds—no queueing builds.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Pipeline-Free</h3>
+      <p class="text-gray-500">No Git repo required for content; versioning is built into the CMS.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Edge-Delivered</h3>
+      <p class="text-gray-500">Origin-less hosting handles global spikes without scaling servers.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Lower Cost</h3>
+      <p class="text-gray-500">Static assets on object storage + CDN keeps infra lean.</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 lg:py-24 bg-white mx-auto px-4 sm:px-6 lg:px-28" id="performance">
+  <h2 class="text-3xl lg:text-4xl font-montserrat font-semibold text-gray-950 mb-4">Built for Demanding Scenarios</h2>
+  <p class="text-gray-500 font-inter text-base mb-8">SkyCMS powers high-performance publishing for teams with diverse
+    needs—from content-heavy publishers to global enterprises.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">🏢 High-Traffic Websites</h3>
+      <p class="text-gray-500">News portals, government sites, e-commerce—handle millions of page views without scaling
+        server costs.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">🌍 Global Organizations</h3>
+      <p class="text-gray-500">Multi-regional content delivery with edge-native hosting ensures sub-second load times
+        worldwide.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">👨‍💻 Development Teams</h3>
+      <p class="text-gray-500">CI/CD integration and developer-friendly workflows for teams that need customization and
+        control.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">🏪 Agencies</h3>
+      <p class="text-gray-500">Multi-tenant management for multiple client sites with separate content, branding, and
+        deployments.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">⚡ Performance-Critical Apps</h3>
+      <p class="text-gray-500">Sites where speed directly impacts revenue—SkyCMS's architecture means performance is
+        built-in, not optimized.</p>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">🔐 Secure & Compliant</h3>
+      <p class="text-gray-500">Multi-cloud deployment keeps you in control of data residency and regulatory compliance.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 lg:py-24 bg-gray-50 mx-auto px-4 sm:px-6 lg:px-28" id="comparison">
+  <h2 class="text-3xl lg:text-4xl font-montserrat font-semibold text-gray-950 mb-4">Performance That Outshines
+    Traditional CMSs</h2>
+  <p class="text-gray-500 font-inter text-base mb-8">See how SkyCMS's edge-native architecture delivers measurable
+    advantages:</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+    <div class="bg-white rounded-2xl p-6 border border-gray-200">
+      <div class="font-semibold text-gray-950 mb-3">Response Time</div>
+      <div class="text-2xl font-bold text-brand-600 mb-1">~50ms</div>
+      <div class="text-sm text-gray-500">SkyCMS (static)</div>
+      <div class="mt-3 pt-3 border-t border-gray-200">
+        <div class="text-lg font-semibold text-gray-700">500-2000ms</div>
+        <div class="text-sm text-gray-500">Others</div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl p-6 border border-gray-200">
+      <div class="font-semibold text-gray-950 mb-3">Availability</div>
+      <div class="text-2xl font-bold text-brand-600 mb-1">99.99%</div>
+      <div class="text-sm text-gray-500">SkyCMS (CDN-backed)</div>
+      <div class="mt-3 pt-3 border-t border-gray-200">
+        <div class="text-lg font-semibold text-gray-700">99.5%</div>
+        <div class="text-sm text-gray-500">Others</div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl p-6 border border-gray-200">
+      <div class="font-semibold text-gray-950 mb-3">Traffic Handling</div>
+      <div class="text-2xl font-bold text-brand-600 mb-1">Unlimited</div>
+      <div class="text-sm text-gray-500">SkyCMS (CDN)</div>
+      <div class="mt-3 pt-3 border-t border-gray-200">
+        <div class="text-lg font-semibold text-gray-700">Limited by server</div>
+        <div class="text-sm text-gray-500">Others</div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl p-6 border border-gray-200">
+      <div class="font-semibold text-gray-950 mb-3">Maintenance</div>
+      <div class="text-2xl font-bold text-brand-600 mb-1">Minimal</div>
+      <div class="text-sm text-gray-500">SkyCMS</div>
+      <div class="mt-3 pt-3 border-t border-gray-200">
+        <div class="text-lg font-semibold text-gray-700">High</div>
+        <div class="text-sm text-gray-500">Others</div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl p-6 border border-gray-200">
+      <div class="font-semibold text-gray-950 mb-3">Scaling Cost</div>
+      <div class="text-2xl font-bold text-brand-600 mb-1">Linear</div>
+      <div class="text-sm text-gray-500">SkyCMS</div>
+      <div class="mt-3 pt-3 border-t border-gray-200">
+        <div class="text-lg font-semibold text-gray-700">Exponential</div>
+        <div class="text-sm text-gray-500">Others</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 lg:py-24 bg-white mx-auto px-4 sm:px-6 lg:px-28" id="getting-started">
+  <h2 class="text-3xl lg:text-4xl font-montserrat font-semibold text-gray-950 mb-4">Getting Started is Simple</h2>
+  <p class="text-gray-500 font-inter text-base mb-8">Three compelling reasons why teams choose SkyCMS:</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+      <div class="text-4xl mb-4">⚡</div>
+      <h3 class="text-xl font-semibold text-gray-950 mb-3">Deploy in Minutes</h3>
+      <p class="text-gray-500 mb-4">Launch CloudFormation stack, fill parameters, and deploy. No complex setup required.
+      </p>
+      <ul class="text-gray-500 text-sm space-y-2 list-disc pl-5">
+        <li>1-click deployment options</li>
+        <li>AWS, Azure, or self-hosted</li>
+        <li>Pre-configured infrastructure</li>
+      </ul>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+      <div class="text-4xl mb-4">📚</div>
+      <h3 class="text-xl font-semibold text-gray-950 mb-3">No Learning Curve</h3>
+      <p class="text-gray-500 mb-4">Whether you're a content creator, developer, or admin—you already know how to use
+        SkyCMS.</p>
+      <ul class="text-gray-500 text-sm space-y-2 list-disc pl-5">
+        <li><strong class="text-gray-700">Content Creators:</strong> If you can use Word or Google Docs, you can use
+          SkyCMS</li>
+        <li><strong class="text-gray-700">Developers:</strong> Standard HTML, CSS, JavaScript knowledge is all you need
+        </li>
+        <li><strong class="text-gray-700">Administrators:</strong> Basic cloud knowledge gets you running</li>
+      </ul>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+      <div class="text-4xl mb-4">💰</div>
+      <h3 class="text-xl font-semibold text-gray-950 mb-3">Cost-Effective from Day One</h3>
+      <p class="text-gray-500 mb-4">Open source, efficient architecture, and pay-as-you-go pricing.</p>
+      <ul class="text-gray-500 text-sm space-y-2 list-disc pl-5">
+        <li>GPL v3 license—no licensing fees</li>
+        <li>Lower hosting costs via optimized architecture</li>
+        <li>Pay only for what you use, scale seamlessly</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 lg:py-24 bg-gray-50 mx-auto px-4 sm:px-6 lg:px-28" id="tools">
+  <h2 class="text-3xl lg:text-4xl font-montserrat font-semibold text-gray-950 mb-4">Professional Tools, Built-In</h2>
+  <p class="text-gray-500 font-inter text-base mb-8">Complete editing and development toolkit—no plugins, no
+    compromises.</p>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center hover:shadow-lg transition-shadow">
+      <div class="text-4xl mb-4">✍️</div>
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">CKEditor 5</h3>
+      <p class="text-gray-500 text-sm">Word-like experience for content creators. Familiar, intuitive, powerful.</p>
+    </div>
+    <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center hover:shadow-lg transition-shadow">
+      <div class="text-4xl mb-4">🎨</div>
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">GrapesJS</h3>
+      <p class="text-gray-500 text-sm">Drag & drop visual page building. Create stunning layouts without code.</p>
+    </div>
+    <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center hover:shadow-lg transition-shadow">
+      <div class="text-4xl mb-4">💻</div>
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Monaco Editor</h3>
+      <p class="text-gray-500 text-sm">VS Code experience for developers. Advanced customization at your fingertips.</p>
+    </div>
+    <div class="bg-white rounded-2xl p-6 border border-gray-200 text-center hover:shadow-lg transition-shadow">
+      <div class="text-4xl mb-4">🖼️</div>
+      <h3 class="text-lg font-semibold text-gray-950 mb-2">Filerobot</h3>
+      <p class="text-gray-500 text-sm">Edit images directly in the CMS. Crop, resize, optimize without leaving SkyCMS.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 lg:py-24 bg-white mx-auto px-4 sm:px-6 lg:px-28" id="pricing">
+  <h2 class="text-3xl lg:text-4xl font-montserrat font-semibold text-gray-950 mb-4">Pricing & Plans</h2>
+  <p class="text-gray-500 font-inter text-base mb-8">Choose the plan that fits your needs. Free self-hosting, or managed
+    plans with professional support.</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+      <h3 class="text-xl font-semibold text-gray-950 mb-2">Free</h3>
+      <p class="text-3xl font-bold text-brand-600 mb-1">$0</p>
+      <p class="text-gray-500 text-sm mb-6">Self-hosted, open source</p>
+      <ul class="text-gray-500 text-sm space-y-3 mb-6">
+        <li>✓ Unlimited pages & content</li>
+        <li>✓ Multi-cloud deployment</li>
+        <li>✓ All editing tools included</li>
+        <li>✓ Community support</li>
+        <li class="text-gray-400">✗ No managed hosting</li>
+        <li class="text-gray-400">✗ No priority support</li>
+      </ul>
+      <a href="#" class="block w-full text-center px-6 py-3 bg-white border border-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">Get
+        Started</a>
+    </div>
+    <div class="bg-brand-50 rounded-2xl p-8 border-2 border-brand-600 relative">
+      <span class="absolute -top-3 left-8 bg-brand-600 text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</span>
+      <h3 class="text-xl font-semibold text-gray-950 mb-2">Professional</h3>
+      <p class="text-3xl font-bold text-brand-600 mb-1">$25<span class="text-lg font-normal text-gray-500">/month</span>
+      </p>
+      <p class="text-gray-500 text-sm mb-6">Managed hosting included</p>
+      <ul class="text-gray-500 text-sm space-y-3 mb-6">
+        <li>✓ 50 GB storage (files + database)</li>
+        <li>✓ Origin-less edge hosting (Cloudflare)</li>
+        <li>✓ Custom domain + TLS/SSL</li>
+        <li>✓ Cloudflare WAF/CDN/DDoS</li>
+        <li>✓ Database backups</li>
+        <li>✓ Priority email support</li>
+        <li>✓ Single sign-on (Google, Microsoft)</li>
+      </ul>
+      <a href="#" class="block w-full text-center px-6 py-3 bg-brand-600 text-white font-semibold rounded-lg hover:bg-brand-700 transition-colors">Subscribe</a>
+    </div>
+    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+      <h3 class="text-xl font-semibold text-gray-950 mb-2">Enterprise</h3>
+      <p class="text-3xl font-bold text-brand-600 mb-1">Custom</p>
+      <p class="text-gray-500 text-sm mb-6">Unlimited scale, dedicated support</p>
+      <ul class="text-gray-500 text-sm space-y-3 mb-6">
+        <li>✓ Unlimited storage</li>
+        <li>✓ Multi-tenant management</li>
+        <li>✓ Custom integrations</li>
+        <li>✓ SLA guarantees</li>
+        <li>✓ Dedicated account manager</li>
+        <li>✓ Phone + email support</li>
+      </ul>
+      <a href="#" class="block w-full text-center px-6 py-3 bg-white border border-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">Contact
+        Sales</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 lg:py-24 bg-brand-50 mx-auto px-4 sm:px-6 lg:px-28" id="final-cta">
+  <div class="text-center max-w-3xl mx-auto">
+    <h2 class="text-3xl lg:text-4xl font-montserrat font-semibold text-gray-950 mb-4">Design without code. Create
+      without limits.</h2>
+    <p class="text-gray-500 font-inter text-lg mb-8">Join teams building faster, publishing simpler, and scaling smarter
+      with SkyCMS.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#" class="inline-flex items-center px-8 py-4 bg-brand-600 text-white font-semibold rounded-lg hover:bg-brand-700 transition-colors">Get
+        Started Free</a>
+      <a href="#" class="inline-flex items-center px-8 py-4 bg-white border border-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors">Schedule
+        a Demo</a>
+    </div>
+  </div>
+</section>
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-6 text-center">
-            <p class="font-montserrat">&copy; 2026 SkyCMS. Built with Tailwind CSS</p>
-            <div class="mt-4 space-x-4">
-                <a href="#" class="text-gray-400 hover:text-brand-400 transition">Privacy Policy</a>
-                <a href="#" class="text-gray-400 hover:text-brand-400 transition">Terms of Service</a>
-                <a href="#" class="text-gray-400 hover:text-brand-400 transition">Contact</a>
+    <footer
+      class="relative bg-white border-gray-200 mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-9 overflow-hidden"
+    >
+      <!-- Background Image with proper spacing -->
+      <div
+        class="absolute inset-0 mt-8 mx-4 lg:mx-9 rounded-2xl"
+        style="
+          background-image: url('/pub/articles/1/HeroBackground.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      ></div>
+      <div class="relative">
+        <!-- Main Footer Content -->
+        <div class="text-center mb-8 mt-9">
+          <!-- Logo -->
+          <div class="flex items-center justify-center space-x-3 mb-8">
+            <div class="h-8 w-8 flex-shrink-0">
+              <img
+                src="assets/images/logomark.svg"
+                alt="SkyCMS Logo"
+                class="h-8 w-8"
+              />
             </div>
+            <span class="font-inter font-bold text-lg text-gray-950"
+              >SKY CMS</span
+            >
+          </div>
+
+          <!-- Footer Links -->
+          <div class="flex flex-wrap justify-center gap-6 lg:gap-8 mb-8">
+            <a
+              href="#overview"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Overview</a
+            >
+            <a
+              href="#features"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Features</a
+            >
+            <a
+              href="#pricing"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Pricing</a
+            >
+            <a
+              href="#careers"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Careers</a
+            >
+            <a
+              href="#help"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Help</a
+            >
+            <a
+              href="#privacy"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Privacy</a
+            >
+          </div>
         </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-950 pt-8 mx-28">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-gray-950 font-inter">
+              © 2024 SkyCMS. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#terms"
+                class="text-gray-950 hover:text-gray-900 font-inter"
+                >Terms</a
+              >
+              <a
+                href="#privacy"
+                class="text-gray-950 hover:text-gray-900 font-inter"
+                >Privacy</a
+              >
+              <a
+                href="#cookies"
+                class="text-gray-950 hover:text-gray-900 font-inter"
+                >Cookies</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden lg:hidden">
+      <div class="fixed top-16 left-0 right-0 z-40 mx-3 sm:mx-4">
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-lg p-4">
+          <nav class="space-y-3">
+            <a
+              href="#about"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="#our-competition"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >Our competition</a
+            >
+            <a
+              href="#features"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >Features</a
+            >
+            <a
+              href="#pricing"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >Pricing</a
+            >
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("mobile-menu");
+        const menuButton = event.target.closest(
+          '[onclick="toggleMobileMenu()"]'
+        );
+        const menuContent = event.target.closest("#mobile-menu");
+
+        if (!menuButton && !menuContent && !menu.classList.contains("hidden")) {
+          menu.classList.add("hidden");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Close mobile menu when clicking on navigation links
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          toggleMobileMenu();
+        });
+      });
+
+      // Performance Section Scroll Animation
+      function initPerformanceAnimation() {
+        const performanceElements = document.querySelectorAll(
+          ".performance-content, .performance-text, .performance-image, .blue-card, .blue-card-text, .blue-card-visual"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        performanceElements.forEach((element) => {
+          observer.observe(element);
+        });
+      }
+
+      // Demanding Scenarios Section Scroll Animation
+      function initScenariosAnimation() {
+        const scenarioElements = document.querySelectorAll(
+          ".scenarios-title, .scenario-card"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        scenarioElements.forEach((element) => {
+          observer.observe(element);
+        });
+      }
+
+      // Competition Section Scroll Animation
+      function initCompetitionAnimation() {
+        const competitionSection = document.querySelector(
+          ".competition-section"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        if (competitionSection) {
+          observer.observe(competitionSection);
+        }
+      }
+
+      // Pricing Section Scroll Animation
+      function initPricingAnimation() {
+        const pricingSection = document.querySelector(".pricing-section");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        if (pricingSection) {
+          observer.observe(pricingSection);
+        }
+      }
+
+      // Closing Section Scroll Animation
+      function initClosingAnimation() {
+        const closingLogo = document.querySelector(".closing-logo");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        if (closingLogo) {
+          observer.observe(closingLogo);
+        }
+      }
+
+      // Initialize animations when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        initPerformanceAnimation();
+        initScenariosAnimation();
+        initCompetitionAnimation();
+        initPricingAnimation();
+        initClosingAnimation();
+
+        // Pricing Tab Functionality
+        const monthlyTab = document.getElementById("monthly-tab");
+        const yearlyTab = document.getElementById("yearly-tab");
+        const professionalPrice = document.getElementById("professional-price");
+        const professionalBillingText = document.getElementById(
+          "professional-billing-text"
+        );
+        const savingsMessage = document.getElementById("savings-message");
+        const professionalCustomDomains = document.getElementById(
+          "professional-custom-domains"
+        );
+        const professionalMonthlyButton = document.getElementById(
+          "professional-monthly-button"
+        );
+        const professionalYearlyButton = document.getElementById(
+          "professional-yearly-button"
+        );
+
+        // Current state
+        let currentBilling = "monthly"; // Default to monthly billing
+
+        // Update pricing display
+        function updatePricing() {
+          if (!professionalPrice) return;
+
+          const price = professionalPrice.getAttribute(
+            `data-${currentBilling}`
+          );
+          professionalPrice.textContent = price;
+
+          if (currentBilling === "monthly") {
+            if (professionalBillingText)
+              professionalBillingText.textContent = "per month";
+            if (savingsMessage) savingsMessage.classList.add("hidden");
+            if (professionalCustomDomains)
+              professionalCustomDomains.innerHTML =
+                "Custom domain +<br />TLS/SSL certificate";
+            // Show monthly button, hide yearly button
+            if (professionalMonthlyButton)
+              professionalMonthlyButton.classList.remove("hidden");
+            if (professionalYearlyButton)
+              professionalYearlyButton.classList.add("hidden");
+          } else {
+            if (professionalBillingText)
+              professionalBillingText.textContent = "per month (billed yearly)";
+            if (savingsMessage) savingsMessage.classList.remove("hidden");
+            if (professionalCustomDomains)
+              professionalCustomDomains.innerHTML =
+                "Custom domain +<br />TLS/SSL certificate";
+            // Show yearly button, hide monthly button
+            if (professionalMonthlyButton)
+              professionalMonthlyButton.classList.add("hidden");
+            if (professionalYearlyButton)
+              professionalYearlyButton.classList.remove("hidden");
+          }
+        }
+
+        // Billing cycle tab handlers
+        if (monthlyTab) {
+          monthlyTab.addEventListener("click", function () {
+            currentBilling = "monthly";
+
+            // Update tab styles
+            monthlyTab.classList.add("bg-brand-600", "text-white");
+            monthlyTab.classList.remove("bg-white", "text-gray-700");
+
+            yearlyTab.classList.remove("bg-brand-600", "text-white");
+            yearlyTab.classList.add("bg-white", "text-gray-700");
+
+            updatePricing();
+            updateMobileProfessionalPricing();
+          });
+        }
+
+        if (yearlyTab) {
+          yearlyTab.addEventListener("click", function () {
+            currentBilling = "yearly";
+
+            // Update tab styles
+            yearlyTab.classList.add("bg-brand-600", "text-white");
+            yearlyTab.classList.remove("bg-white", "text-gray-700");
+
+            monthlyTab.classList.remove("bg-brand-600", "text-white");
+            monthlyTab.classList.add("bg-white", "text-gray-700");
+
+            updatePricing();
+            updateMobileProfessionalPricing();
+          });
+        }
+
+        // Initialize pricing display
+        updatePricing();
+
+        // Mobile Products Tab Functionality
+        const freeTab = document.getElementById("free-tab");
+        const professionalTab = document.getElementById("professional-tab");
+        const customTab = document.getElementById("custom-tab");
+
+        // Plan cards
+        const freePlanCard = document.getElementById("free-plan-card");
+        const professionalPlanCard = document.getElementById(
+          "professional-plan-card"
+        );
+        const customPlanCard = document.getElementById("custom-plan-card");
+
+        // Mobile professional pricing elements
+        const mobileProfessionalPrice = document.getElementById(
+          "mobile-professional-price"
+        );
+        const mobileProfessionalBillingText = document.getElementById(
+          "mobile-professional-billing-text"
+        );
+        const mobileSavingsMessage = document.getElementById(
+          "mobile-savings-message"
+        );
+        const mobileProfessionalMonthlyButton = document.getElementById(
+          "mobile-professional-monthly-button"
+        );
+        const mobileProfessionalYearlyButton = document.getElementById(
+          "mobile-professional-yearly-button"
+        );
+
+        let currentPlan = "professional"; // Default to professional
+
+        // Update mobile professional pricing based on billing cycle
+        function updateMobileProfessionalPricing() {
+          if (!mobileProfessionalPrice) return;
+
+          if (currentBilling === "yearly") {
+            mobileProfessionalPrice.textContent = "20";
+            if (mobileProfessionalBillingText) {
+              mobileProfessionalBillingText.textContent =
+                "per month (billed yearly)";
+            }
+            if (mobileSavingsMessage) {
+              mobileSavingsMessage.classList.remove("hidden");
+            }
+            if (mobileProfessionalMonthlyButton) {
+              mobileProfessionalMonthlyButton.classList.add("hidden");
+            }
+            if (mobileProfessionalYearlyButton) {
+              mobileProfessionalYearlyButton.classList.remove("hidden");
+            }
+          } else {
+            mobileProfessionalPrice.textContent = "25";
+            if (mobileProfessionalBillingText) {
+              mobileProfessionalBillingText.textContent = "per month";
+            }
+            if (mobileSavingsMessage) {
+              mobileSavingsMessage.classList.add("hidden");
+            }
+            if (mobileProfessionalMonthlyButton) {
+              mobileProfessionalMonthlyButton.classList.remove("hidden");
+            }
+            if (mobileProfessionalYearlyButton) {
+              mobileProfessionalYearlyButton.classList.add("hidden");
+            }
+          }
+        }
+
+        // Show plan card based on selection
+        function showPlanCard(plan) {
+          // Hide all cards
+          if (freePlanCard) freePlanCard.classList.add("hidden");
+          if (professionalPlanCard)
+            professionalPlanCard.classList.add("hidden");
+          if (customPlanCard) customPlanCard.classList.add("hidden");
+
+          // Show selected card
+          if (plan === "free" && freePlanCard) {
+            freePlanCard.classList.remove("hidden");
+          } else if (plan === "professional" && professionalPlanCard) {
+            professionalPlanCard.classList.remove("hidden");
+            updateMobileProfessionalPricing();
+          } else if (plan === "custom" && customPlanCard) {
+            customPlanCard.classList.remove("hidden");
+          }
+
+          currentPlan = plan;
+        }
+
+        // Update tab styles
+        function updateTabStyles(activeTab) {
+          if (!activeTab) return;
+
+          // Reset all tabs
+          [freeTab, professionalTab, customTab].forEach((tab) => {
+            if (tab) {
+              tab.classList.remove("bg-brand-600", "text-white");
+              tab.classList.add("bg-white", "text-gray-700");
+            }
+          });
+
+          // Style active tab
+          activeTab.classList.add("bg-brand-600", "text-white");
+          activeTab.classList.remove("bg-white", "text-gray-700");
+        }
+
+        // Tab click handlers
+        if (freeTab) {
+          freeTab.addEventListener("click", function () {
+            updateTabStyles(freeTab);
+            showPlanCard("free");
+          });
+        }
+
+        if (professionalTab) {
+          professionalTab.addEventListener("click", function () {
+            updateTabStyles(professionalTab);
+            showPlanCard("professional");
+          });
+        }
+
+        if (customTab) {
+          customTab.addEventListener("click", function () {
+            updateTabStyles(customTab);
+            showPlanCard("custom");
+          });
+        }
+
+        // Initialize - show professional plan by default and set tab style
+        if (professionalTab) {
+          updateTabStyles(professionalTab);
+          showPlanCard("professional");
+        }
+      });
+    </script>
+    
+<script>
+  // --- Helpers you already have ---
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+  }
+
+  function learnMore(el) {
+    window.location.href = el.getAttribute('data-href');
+  }
+
+  const rotations = [
+    { title: 'For Content Creators & Editors', tagline: 'WYSIWYG Editing/Visual Page Building', learnMoreHref: '/for-contentful-and-strapi-users' },
+    { title: 'An alternative for WordPress/Drupal', tagline: 'Finally, Speed Without Starting Over.', learnMoreHref: '/wordpress-and-drupal' },
+    { title: 'An alternative for Jekyll/Hugo/Gatsby', tagline: 'Static Performance. Editor-Friendly Publishing.', learnMoreHref: '/for-jekyll-hugo-and-gatsby-users' },
+    { title: 'An alternative for Netlify/CloudCannon & Git Pipelines', tagline: 'No Build Pipelines. No Waiting. Just Publish.', learnMoreHref: '/for-netlify-cloudcannon-and-git-pipeline-users' },
+    { title: 'An alternative for Contentful/Strapi', tagline: 'Complete Pages. Not Just Content APIs.', learnMoreHref: '/for-contentful-and-strapi-users' },
+    { title: 'For Modern Web Teams', tagline: 'Static Speed. CMS Simplicity. Edge Delivery.', learnMoreHref: '/for-modern-web-teams' }
+  ];
+
+  // --- Elements ---
+  const titleEl = document.getElementById('rotation-title');
+  const taglineEl = document.getElementById('rotation-tagline');
+  const learnMoreEl = document.getElementById('learn-more');            // anchor-like element holding data-href
+  const btnLearnMoreEl = document.getElementById('rotation-learnmore-btn');
+
+  // --- State & timing ---
+  let idx = 0;
+  const FADE_MS = 700;  // duration for fade-in/out
+  const HOLD_MS = 6500; // time between rotations (not counting fade time)
+
+  // Respect reduced motion
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // --- Initialize transition styles inline (no external CSS needed) ---
+  [titleEl, taglineEl, btnLearnMoreEl].forEach(el => {
+    if (!el) return;
+    el.style.opacity = '1';
+    el.style.transitionProperty = 'opacity';
+    el.style.transitionDuration = prefersReducedMotion ? '0ms' : FADE_MS + 'ms';
+    el.style.transitionTimingFunction = 'ease';
+    // Optional: avoid clicks while hidden
+    el.style.pointerEvents = 'auto';
+    el.setAttribute('aria-hidden', 'false');
+  });
+
+  // --- Helper to update the learn-more destination ---
+  function updateLearnMore(next) {
+    if (!learnMoreEl) return;
+    if (next?.learnMoreHref) {
+      learnMoreEl.setAttribute('data-href', next.learnMoreHref);
+      if (btnLearnMoreEl) {
+        btnLearnMoreEl.style.pointerEvents = 'auto';
+        btnLearnMoreEl.setAttribute('aria-hidden', 'false');
+      }
+    } else {
+      learnMoreEl.removeAttribute('data-href');
+      if (btnLearnMoreEl) {
+        btnLearnMoreEl.style.pointerEvents = 'none';
+        btnLearnMoreEl.setAttribute('aria-hidden', 'true');
+      }
+    }
+  }
+
+  // --- Core fade helper using transitionend ---
+  function fade(el, toHidden) {
+    return new Promise(resolve => {
+      if (!el) return resolve();
+
+      // If reduced motion, jump immediately.
+      if (prefersReducedMotion) {
+        el.style.opacity = toHidden ? '0' : '1';
+        el.style.pointerEvents = toHidden ? 'none' : 'auto';
+        el.setAttribute('aria-hidden', toHidden ? 'true' : 'false');
+        return resolve();
+      }
+
+      const handler = (e) => {
+        // Only resolve when opacity transition completes for the target element
+        if (e.propertyName === 'opacity' && e.target === el) {
+          el.removeEventListener('transitionend', handler);
+          resolve();
+        }
+      };
+
+      // Ensure we remove previous handlers before attaching a new one (defensive)
+      el.removeEventListener('transitionend', handler);
+      el.addEventListener('transitionend', handler, { once: true });
+
+      // Apply target style on next frame so starting opacity is committed
+      requestAnimationFrame(() => {
+        el.style.opacity = toHidden ? '0' : '1';
+        el.style.pointerEvents = toHidden ? 'none' : 'auto';
+        el.setAttribute('aria-hidden', toHidden ? 'true' : 'false');
+      });
+    });
+  }
+
+  // --- Rotate logic using transitionend for precise timing ---
+  async function rotate() {
+    const elements = [titleEl, taglineEl, btnLearnMoreEl].filter(Boolean);
+
+    // Fade out all
+    await Promise.all(elements.map(el => fade(el, true)));
+
+    // Swap content
+    idx = (idx + 1) % rotations.length;
+    const next = rotations[idx];
+    titleEl.textContent = next.title;
+    taglineEl.textContent = next.tagline;
+    updateLearnMore(next);
+
+    // Small micro-delay to avoid same-frame flip-flop (helps some browsers)
+    await new Promise(r => requestAnimationFrame(r));
+
+    // Fade in all
+    await Promise.all(elements.map(el => fade(el, false)));
+  }
+
+  // --- Kick off ---
+  // Set initial content and destination
+  updateLearnMore(rotations[idx]);
+
+  // Run first rotation immediately so the cadence is consistent
+  rotate();
+
+  // Then keep rotating at the desired interval
+  setInterval(rotate, HOLD_MS);
+</script>
+
 </body>
 </html>

@@ -1,0 +1,1354 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Sky Comparisons</title>
+    <meta property="og:title" content="Sky Comparisons" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="" />
+    <meta property="article:modified_time" content="2025-12-13 14:13:15Z">
+    <meta name="cwps-meta-path-url" content="sky-comparisons" />
+    <meta name="cwps-meta-path-updated" content="12/13/2025 14:13:15 &#x2B;00:00" />
+    <meta name="cwps-meta-path-title" content="Sky Comparisons" />
+    <meta name="cwps-meta-author-info" content="{&#x27;Id&#x27;:&#x27;e2bdd627-b421-44dc-9ea7-952f76a56e79&#x27;,&#x27;AuthorName&#x27;:&#x27;eric@moonrise.net&#x27;,&#x27;AuthorDescription&#x27;:&#x27;&#x27;,&#x27;TwitterHandle&#x27;:null,&#x27;InstagramUrl&#x27;:null,&#x27;Website&#x27;:null,&#x27;EmailAddress&#x27;:null}" />
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SkyCMS - The High-Performance CMS Built for the Cloud</title>
+<link rel="stylesheet" href="../dist/tailwind.css" />
+<script>
+  tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                25: "#F7FBFE",
+                50: "#F1F9FE",
+                100: "#E2F2FC",
+                200: "#BEE6F9",
+                500: "#1CA2DB",
+                600: "#108CC9",
+                700: "#0D6797",
+                950: "#0C2F45",
+              },
+              gray: {
+                25: "#FDFDFD",
+                50: "#FAFAFA",
+                100: "#F5F5F5",
+                200: "#E9EAEB",
+                500: "#717680",
+                600: "#535862",
+                700: "#414651",
+                900: "#181D27",
+                950: "#0A0D12",
+              },
+            },
+            fontFamily: {
+              montserrat: ["Montserrat", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+</script>
+<style>
+  body {
+    background-color: white;
+  }
+  /* Hero Section Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUpFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-background {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .hero-text {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUpFadeIn 1s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .hero-image {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  /* Performance Section Animations */
+  @keyframes slideDownFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .performance-content {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .performance-content.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+  }
+
+  .performance-text {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .performance-text.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+
+  .performance-image {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .performance-image.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+
+  /* Blue Card Animations */
+  .blue-card {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .blue-card.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+  }
+
+  .blue-card-text {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .blue-card-text.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .blue-card-visual {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  .blue-card-visual.animate {
+    animation: slideDownFadeIn 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+
+  /* Demanding Scenarios Section Animations */
+  @keyframes slideUpFadeInFast {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scenarios-title {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .scenarios-title.animate {
+    animation: slideUpFadeInFast 0.6s ease-out forwards;
+  }
+
+  .scenario-card {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  .scenario-card.animate {
+    animation: slideUpFadeInFast 0.6s ease-out forwards;
+  }
+
+  .scenario-card:nth-child(1).animate {
+    animation-delay: 0.1s;
+  }
+
+  .scenario-card:nth-child(2).animate {
+    animation-delay: 0.2s;
+  }
+
+  .scenario-card:nth-child(3).animate {
+    animation-delay: 0.3s;
+  }
+
+  .scenario-card:nth-child(4).animate {
+    animation-delay: 0.5s;
+  }
+
+  .scenario-card:nth-child(5).animate {
+    animation-delay: 0.6s;
+  }
+
+  /* Competition Section Animation */
+  .competition-section {
+    opacity: 0;
+  }
+
+  .competition-section.animate {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  /* Pricing Section Animation */
+  .pricing-section {
+    opacity: 0;
+  }
+
+  .pricing-section.animate {
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+
+  /* Closing Section Animation */
+  .closing-logo {
+    opacity: 0;
+  }
+
+  .closing-logo.animate {
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+</style>
+<link rel="stylesheet" href="../assets/css/vendor/ckeditor5-content.css" />
+      <!-- Override page styles -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              25: '#f0fdfa',
+              50: '#e6f7f3',
+              100: '#d0f0e8',
+              200: '#a3e0d2',
+              300: '#6fcfba',
+              400: '#4db8a0',
+              500: '#2f9d84',
+              600: '#28846f',
+              700: '#246b5b',
+              800: '#21564a',
+              900: '#1f483e',
+              950: '#0d2a24',
+            },
+            gray: {
+              25: '#fcfcfd',
+              50: '#f9fafb',
+              100: '#f2f4f7',
+              200: '#e4e7ec',
+              300: '#d0d5dd',
+              400: '#98a2b3',
+              500: '#667085',
+              600: '#475467',
+              700: '#344054',
+              800: '#1d2939',
+              900: '#101828',
+              950: '#0c111d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+    </head>
+<body>
+    <!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 pt-3 px-3 sm:px-4">
+  <div class="max-w-7xl mx-auto w-full">
+    <!-- Nav wrapper with white background, border and shadow -->
+    <div
+      class="bg-white rounded-2xl border border-gray-200 shadow-sm px-3 sm:px-4 pr-2 sm:pr-3 py-3 flex items-center justify-between min-w-0 w-full">
+      <!-- Logo -->
+      <a href='../index.html' class="flex items-center min-w-0 flex-shrink-0">
+        <div class="h-8 w-8 mr-2 sm:mr-3 flex-shrink-0">
+
+          <img
+                src="../assets/images/logomark.svg"
+                alt="SkyCMS Logo"
+                class="h-8 w-8"
+              />
+        </div>
+        <span
+              class="font-inter font-bold text-base sm:text-lg text-gray-950 whitespace-nowrap"
+              >SKY CMS</span>
+      </a>
+
+      <!-- Centered Navigation -->
+      <div class="hidden lg:flex items-center justify-center space-x-8 flex-1">
+        <!-- About -->
+        <a href="../docs/index.md" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Docs
+        </a>
+
+        <!-- Our competition -->
+        <a href="why-skycms.html" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Why Sky?
+        </a>
+
+        <!-- Our competition -->
+        <a href="sky-comparisons.html" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Comparisons
+        </a>
+
+        <!-- Features -->
+        <a href="features.html" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Features
+        </a>
+
+        <!-- Pricing -->
+        <a href="#pricing" class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          Pricing
+        </a>
+
+        <!-- Pricing -->
+        <a href="../README.md"
+          class="text-gray-600 hover:text-gray-900 font-semibold text-base">
+          GitHub
+        </a>
+      </div>
+
+      <!-- Right side - Mobile Menu Button only -->
+      <div class="flex items-center">
+        <!-- Mobile Menu Button -->
+        <button
+              class="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+              onclick="toggleMobileMenu()"
+              aria-label="Toggle mobile menu"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+      </div>
+    </div>
+  </div>
+</nav>
+<script>
+  function toggleMobileMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+</script>
+      <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-50 to-white">
+      <div class="max-w-7xl mx-auto">
+        <span class="inline-block px-4 py-1.5 bg-brand-100 text-brand-700 rounded-full text-sm font-medium mb-4">Feature & Pain Point Comparison</span>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">How SkyCMS Stacks Up</h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl">See how SkyCMS addresses the pain points that teams encounter with WordPress, static generators, Git-based platforms, headless CMSs, and traditional solutions.</p>
+        <a href="../index.html" class="inline-block bg-brand-600 text-white px-6 py-3 rounded-lg hover:bg-brand-700 transition-colors font-medium">Explore SkyCMS</a>
+      </div>
+    </section>
+
+    <!-- Publishing & Performance Section -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Publishing & Performance</h2>
+        <div class="mb-6 p-4 border-l-4 border-brand-500 bg-brand-25 rounded-r-lg">
+          <span class="font-semibold text-gray-900">How fast and frictionless is publishing?</span> <span class="text-gray-600">Speed matters for editor experience and content velocity.</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse bg-white rounded-xl border border-gray-200 shadow-sm">
+            <thead class="bg-brand-50">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Capability</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200 bg-brand-100">SkyCMS</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">WordPress</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Static Generators</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Git Pipelines</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Headless CMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Publish Speed</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">&lt; 5 seconds</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100">Seconds (with caching)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100">Minutes (build time)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100">Minutes (build + deploy)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100">Seconds (API only)</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">No Build Pipeline</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Native</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Requires plugins</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Build is core</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Pipeline is core</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Content is separate</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Complete Pages</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Yes, native</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes, native</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes, native</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes, native</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">APIs only</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Instant Rollback</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">CMS-based</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes (with plugins)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Requires rebuild</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Tied to deploys</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Not included</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Origin Load</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Minimal (static)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">High (runtime)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Minimal (static)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Minimal (static)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">API-driven</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900">Global Performance</td>
+                <td class="px-4 py-3 bg-brand-25 text-brand-700 font-medium checkmark">Sub-second (edge)</td>
+                <td class="px-4 py-3 text-gray-600 cross">Depends on hosting</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Sub-second (CDN)</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Sub-second (CDN)</td>
+                <td class="px-4 py-3 text-gray-600 cross">API-dependent</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editor Experience Section -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Editor Experience</h2>
+        <div class="mb-6 p-4 border-l-4 border-brand-500 bg-brand-25 rounded-r-lg">
+          <span class="font-semibold text-gray-900">How easy is it for non-developers to create and publish content?</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse bg-white rounded-xl border border-gray-200 shadow-sm">
+            <thead class="bg-brand-50">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Capability</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200 bg-brand-100">SkyCMS</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">WordPress</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Static Generators</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Git Pipelines</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Headless CMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">WYSIWYG Editing</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">CKEditor 5</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Native</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Requires Markdown</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Requires Git/Markdown</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Visual Page Building</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">GrapesJS</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Page builders (plugins)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Not available</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Not available</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Limited UI</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">No Code Required</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Yes, fully</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes, fully</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Requires Git/CLI</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Requires Git/CI</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Content only</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Preview Before Publish</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Yes, built-in</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes, native</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Requires build</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Requires build</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes, via API</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Intuitive Interface</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">CMS-native</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Mature UI</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Not applicable</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Git UI</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Modern UI</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900">Multi-user Collaboration</td>
+                <td class="px-4 py-3 bg-brand-25 text-brand-700 font-medium checkmark">Yes</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Yes</td>
+                <td class="px-4 py-3 text-gray-600 cross">File-based</td>
+                <td class="px-4 py-3 text-gray-600 cross">Git-based</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developer Experience Section -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Developer Experience</h2>
+        <div class="mb-6 p-4 border-l-4 border-brand-500 bg-brand-25 rounded-r-lg">
+          <span class="font-semibold text-gray-900">How flexible and maintainable is it for developers?</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse bg-white rounded-xl border border-gray-200 shadow-sm">
+            <thead class="bg-brand-50">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Capability</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200 bg-brand-100">SkyCMS</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">WordPress</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Static Generators</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Git Pipelines</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Headless CMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Code Customization</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Monaco editor</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Theme/plugin system</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Full source control</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Full source control</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Frontend owned</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Static/Dynamic Hybrid</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Multiple modes</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Plugins needed</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Custom build step</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Via frontend</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Frontend-driven</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Multi-Cloud Deploy</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">S3, Azure, R2</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Hosting-tied</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Any static host</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Any static host</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">API-only</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">No Lock-In</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Portable pages</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">High migration cost</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Source files</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Source files</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">API export</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Infrastructure Complexity</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Low (static)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">High (runtime)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Low (static)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Low (static)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Frontend + backend</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900">API Support</td>
+                <td class="px-4 py-3 bg-brand-25 text-brand-700 font-medium checkmark">Optional REST</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Yes (WP REST API)</td>
+                <td class="px-4 py-3 text-gray-600 cross">Not available</td>
+                <td class="px-4 py-3 text-gray-600 cross">Not available</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Core feature</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Operations & Maintenance Section -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Operations & Maintenance</h2>
+        <div class="mb-6 p-4 border-l-4 border-brand-500 bg-brand-25 rounded-r-lg">
+          <span class="font-semibold text-gray-900">How much operational overhead and ongoing maintenance is required?</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse bg-white rounded-xl border border-gray-200 shadow-sm">
+            <thead class="bg-brand-50">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Capability</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200 bg-brand-100">SkyCMS</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">WordPress</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Static Generators</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Git Pipelines</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Headless CMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Performance Built-In</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Yes, static + edge</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Requires optimization</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes, by design</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes, by design</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Frontend dependent</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Plugin Ecosystem to Manage</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">None required</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Multiple plugins</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">None</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">None</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">None</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Scaling Complexity</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Built-in (edge)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Server scaling needed</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Simple (CDN)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Simple (CDN)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">API scaling</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Security Updates</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Minimal surface</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Core + plugins</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Minimal</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Minimal</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">API-focused</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Database Management</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Minimal</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Required, complex</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">None</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">None</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Required</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Backup & Recovery</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Versioning native</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Plugin-dependent</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Git-based</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Git-based</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">API-dependent</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900">Core Web Vitals Compliance</td>
+                <td class="px-4 py-3 bg-brand-25 text-brand-700 font-medium checkmark">Inherent</td>
+                <td class="px-4 py-3 text-gray-600 cross">Requires plugins</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Good defaults</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Good defaults</td>
+                <td class="px-4 py-3 text-gray-600 partial">Frontend work</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost & Flexibility Section -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Cost & Flexibility</h2>
+        <div class="mb-6 p-4 border-l-4 border-brand-500 bg-brand-25 rounded-r-lg">
+          <span class="font-semibold text-gray-900">What are the financial and architectural trade-offs?</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm border-collapse bg-white rounded-xl border border-gray-200 shadow-sm">
+            <thead class="bg-brand-50">
+              <tr>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Capability</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200 bg-brand-100">SkyCMS</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">WordPress</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Static Generators</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Git Pipelines</th>
+                <th class="px-4 py-3 text-left font-semibold text-gray-900 border-b border-gray-200">Headless CMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Free/Open Source</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Yes (self-host)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Yes</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 partial">Some (Strapi)</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Hosting Cost</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Low (object storage)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Medium to high</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Low (static)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Low (static)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">High (APIs)</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Infrastructure Costs Scale</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Linear (storage)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">With traffic</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Linear (storage)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Linear (storage)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">With requests</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Build/Deploy Cost</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">None (direct)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">None</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Per build</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Per build/deploy</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">None</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900 border-b border-gray-100">Vendor Lock-In</td>
+                <td class="px-4 py-3 border-b border-gray-100 bg-brand-25 text-brand-700 font-medium checkmark">Low (portable)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">High (ecosystem)</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Low</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 checkmark">Low</td>
+                <td class="px-4 py-3 text-gray-600 border-b border-gray-100 cross">Medium (APIs)</td>
+              </tr>
+              <tr class="hover:bg-gray-50">
+                <td class="px-4 py-3 font-medium text-gray-900">Feature Flexibility</td>
+                <td class="px-4 py-3 bg-brand-25 text-brand-700 font-medium checkmark">High (modes)</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">High (plugins)</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Very high</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Very high</td>
+                <td class="px-4 py-3 text-gray-600 checkmark">Very high</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Legend -->
+        <div class="mt-8 flex flex-wrap gap-6 p-4 bg-white rounded-xl border border-gray-200">
+          <div class="flex items-center gap-2 text-sm text-gray-600">
+            <span class="text-brand-600 font-bold">✓</span>
+            <span>Strong support / Best-in-class</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-600">
+            <span class="text-amber-500 font-bold">◐</span>
+            <span>Partial / Requires additional work</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm text-gray-600">
+            <span class="text-red-500 font-bold">✗</span>
+            <span>Not supported / Weak support</span>
+          </div>
+        </div>
+
+        <!-- Note -->
+        <div class="mt-6 p-4 bg-gray-50 rounded-xl border border-gray-200 text-sm text-gray-600">
+          <span class="font-semibold text-gray-900">Note on this comparison:</span> This table represents typical implementations and out-of-the-box capabilities as of December 2025. WordPress performance can be improved with optimization plugins, but requires additional setup. Static generators and Git pipelines excel at source control but require developer workflows. Headless CMSs provide powerful APIs but don't ship complete pages. SkyCMS's core design philosophy is "fast publishing for teams" — combining CMS simplicity with static/edge performance and minimal operational overhead.
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Takeaways Section -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Key Takeaways</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:border-brand-300 hover:bg-brand-25 transition-colors">
+            <h3 class="text-lg font-bold text-brand-600 mb-2">Publishing Speed</h3>
+            <p class="text-gray-600">SkyCMS ships complete pages in &lt;5 seconds with no build pipeline, while maintaining static-site performance.</p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:border-brand-300 hover:bg-brand-25 transition-colors">
+            <h3 class="text-lg font-bold text-brand-600 mb-2">Editor UX + Developer Control</h3>
+            <p class="text-gray-600">WYSIWYG + visual builders for non-developers, plus Monaco for code-based customization.</p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:border-brand-300 hover:bg-brand-25 transition-colors">
+            <h3 class="text-lg font-bold text-brand-600 mb-2">Performance Built-In</h3>
+            <p class="text-gray-600">No plugins, no optimization work—static + edge delivery means every page loads at sub-second speeds globally.</p>
+          </div>
+          <div class="bg-gray-50 rounded-2xl border border-gray-200 p-6 hover:border-brand-300 hover:bg-brand-25 transition-colors">
+            <h3 class="text-lg font-bold text-brand-600 mb-2">Operational Simplicity</h3>
+            <p class="text-gray-600">Multi-cloud, no lock-in, minimal infrastructure complexity, versioning native to the CMS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-brand-50 to-white">
+      <div class="max-w-7xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Ready to Compare?</h2>
+        <p class="text-gray-600 mb-8">See how SkyCMS simplifies your publishing workflow.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="../index.html" class="bg-brand-600 text-white px-6 py-3 rounded-lg hover:bg-brand-700 transition-colors font-medium">Explore SkyCMS</a>
+          <a href="why-skycms.html" class="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-50 transition-colors font-medium">Learn More</a>
+        </div>
+      </div>
+    </section>
+  </main>
+    <!-- Footer -->
+    <footer
+      class="relative bg-white border-gray-200 mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-9 overflow-hidden"
+    >
+      <!-- Background Image with proper spacing -->
+      <div
+        class="absolute inset-0 mt-8 mx-4 lg:mx-9 rounded-2xl"
+        style="
+          background-image: url('/pub/articles/1/HeroBackground.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      ></div>
+      <div class="relative">
+        <!-- Main Footer Content -->
+        <div class="text-center mb-8 mt-9">
+          <!-- Logo -->
+          <div class="flex items-center justify-center space-x-3 mb-8">
+            <div class="h-8 w-8 flex-shrink-0">
+              <img
+                src="../assets/images/logomark.svg"
+                alt="SkyCMS Logo"
+                class="h-8 w-8"
+              />
+            </div>
+            <span class="font-inter font-bold text-lg text-gray-950"
+              >SKY CMS</span
+            >
+          </div>
+
+          <!-- Footer Links -->
+          <div class="flex flex-wrap justify-center gap-6 lg:gap-8 mb-8">
+            <a
+              href="#overview"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Overview</a
+            >
+            <a
+              href="#features"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Features</a
+            >
+            <a
+              href="#pricing"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Pricing</a
+            >
+            <a
+              href="#careers"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Careers</a
+            >
+            <a
+              href="#help"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Help</a
+            >
+            <a
+              href="#privacy"
+              class="text-gray-950 hover:text-gray-900 font-semibold"
+              >Privacy</a
+            >
+          </div>
+        </div>
+
+        <!-- Bottom Footer -->
+        <div class="border-t border-gray-950 pt-8 mx-28">
+          <div
+            class="flex flex-col sm:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-gray-950 font-inter">
+              © 2024 SkyCMS. All rights reserved.
+            </p>
+            <div class="flex space-x-6">
+              <a
+                href="#terms"
+                class="text-gray-950 hover:text-gray-900 font-inter"
+                >Terms</a
+              >
+              <a
+                href="#privacy"
+                class="text-gray-950 hover:text-gray-900 font-inter"
+                >Privacy</a
+              >
+              <a
+                href="#cookies"
+                class="text-gray-950 hover:text-gray-900 font-inter"
+                >Cookies</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden lg:hidden">
+      <div class="fixed top-16 left-0 right-0 z-40 mx-3 sm:mx-4">
+        <div class="bg-white rounded-2xl border border-gray-200 shadow-lg p-4">
+          <nav class="space-y-3">
+            <a
+              href="#about"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="#our-competition"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >Our competition</a
+            >
+            <a
+              href="#features"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >Features</a
+            >
+            <a
+              href="#pricing"
+              class="block py-3 px-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-lg font-medium transition-colors"
+              >Pricing</a
+            >
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("mobile-menu");
+        const menuButton = event.target.closest(
+          '[onclick="toggleMobileMenu()"]'
+        );
+        const menuContent = event.target.closest("#mobile-menu");
+
+        if (!menuButton && !menuContent && !menu.classList.contains("hidden")) {
+          menu.classList.add("hidden");
+        }
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Close mobile menu when clicking on navigation links
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          toggleMobileMenu();
+        });
+      });
+
+      // Performance Section Scroll Animation
+      function initPerformanceAnimation() {
+        const performanceElements = document.querySelectorAll(
+          ".performance-content, .performance-text, .performance-image, .blue-card, .blue-card-text, .blue-card-visual"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        performanceElements.forEach((element) => {
+          observer.observe(element);
+        });
+      }
+
+      // Demanding Scenarios Section Scroll Animation
+      function initScenariosAnimation() {
+        const scenarioElements = document.querySelectorAll(
+          ".scenarios-title, .scenario-card"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        scenarioElements.forEach((element) => {
+          observer.observe(element);
+        });
+      }
+
+      // Competition Section Scroll Animation
+      function initCompetitionAnimation() {
+        const competitionSection = document.querySelector(
+          ".competition-section"
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        if (competitionSection) {
+          observer.observe(competitionSection);
+        }
+      }
+
+      // Pricing Section Scroll Animation
+      function initPricingAnimation() {
+        const pricingSection = document.querySelector(".pricing-section");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        if (pricingSection) {
+          observer.observe(pricingSection);
+        }
+      }
+
+      // Closing Section Scroll Animation
+      function initClosingAnimation() {
+        const closingLogo = document.querySelector(".closing-logo");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        if (closingLogo) {
+          observer.observe(closingLogo);
+        }
+      }
+
+      // Initialize animations when DOM is loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        initPerformanceAnimation();
+        initScenariosAnimation();
+        initCompetitionAnimation();
+        initPricingAnimation();
+        initClosingAnimation();
+
+        // Pricing Tab Functionality
+        const monthlyTab = document.getElementById("monthly-tab");
+        const yearlyTab = document.getElementById("yearly-tab");
+        const professionalPrice = document.getElementById("professional-price");
+        const professionalBillingText = document.getElementById(
+          "professional-billing-text"
+        );
+        const savingsMessage = document.getElementById("savings-message");
+        const professionalCustomDomains = document.getElementById(
+          "professional-custom-domains"
+        );
+        const professionalMonthlyButton = document.getElementById(
+          "professional-monthly-button"
+        );
+        const professionalYearlyButton = document.getElementById(
+          "professional-yearly-button"
+        );
+
+        // Current state
+        let currentBilling = "monthly"; // Default to monthly billing
+
+        // Update pricing display
+        function updatePricing() {
+          if (!professionalPrice) return;
+
+          const price = professionalPrice.getAttribute(
+            `data-${currentBilling}`
+          );
+          professionalPrice.textContent = price;
+
+          if (currentBilling === "monthly") {
+            if (professionalBillingText)
+              professionalBillingText.textContent = "per month";
+            if (savingsMessage) savingsMessage.classList.add("hidden");
+            if (professionalCustomDomains)
+              professionalCustomDomains.innerHTML =
+                "Custom domain +<br />TLS/SSL certificate";
+            // Show monthly button, hide yearly button
+            if (professionalMonthlyButton)
+              professionalMonthlyButton.classList.remove("hidden");
+            if (professionalYearlyButton)
+              professionalYearlyButton.classList.add("hidden");
+          } else {
+            if (professionalBillingText)
+              professionalBillingText.textContent = "per month (billed yearly)";
+            if (savingsMessage) savingsMessage.classList.remove("hidden");
+            if (professionalCustomDomains)
+              professionalCustomDomains.innerHTML =
+                "Custom domain +<br />TLS/SSL certificate";
+            // Show yearly button, hide monthly button
+            if (professionalMonthlyButton)
+              professionalMonthlyButton.classList.add("hidden");
+            if (professionalYearlyButton)
+              professionalYearlyButton.classList.remove("hidden");
+          }
+        }
+
+        // Billing cycle tab handlers
+        if (monthlyTab) {
+          monthlyTab.addEventListener("click", function () {
+            currentBilling = "monthly";
+
+            // Update tab styles
+            monthlyTab.classList.add("bg-brand-600", "text-white");
+            monthlyTab.classList.remove("bg-white", "text-gray-700");
+
+            yearlyTab.classList.remove("bg-brand-600", "text-white");
+            yearlyTab.classList.add("bg-white", "text-gray-700");
+
+            updatePricing();
+            updateMobileProfessionalPricing();
+          });
+        }
+
+        if (yearlyTab) {
+          yearlyTab.addEventListener("click", function () {
+            currentBilling = "yearly";
+
+            // Update tab styles
+            yearlyTab.classList.add("bg-brand-600", "text-white");
+            yearlyTab.classList.remove("bg-white", "text-gray-700");
+
+            monthlyTab.classList.remove("bg-brand-600", "text-white");
+            monthlyTab.classList.add("bg-white", "text-gray-700");
+
+            updatePricing();
+            updateMobileProfessionalPricing();
+          });
+        }
+
+        // Initialize pricing display
+        updatePricing();
+
+        // Mobile Products Tab Functionality
+        const freeTab = document.getElementById("free-tab");
+        const professionalTab = document.getElementById("professional-tab");
+        const customTab = document.getElementById("custom-tab");
+
+        // Plan cards
+        const freePlanCard = document.getElementById("free-plan-card");
+        const professionalPlanCard = document.getElementById(
+          "professional-plan-card"
+        );
+        const customPlanCard = document.getElementById("custom-plan-card");
+
+        // Mobile professional pricing elements
+        const mobileProfessionalPrice = document.getElementById(
+          "mobile-professional-price"
+        );
+        const mobileProfessionalBillingText = document.getElementById(
+          "mobile-professional-billing-text"
+        );
+        const mobileSavingsMessage = document.getElementById(
+          "mobile-savings-message"
+        );
+        const mobileProfessionalMonthlyButton = document.getElementById(
+          "mobile-professional-monthly-button"
+        );
+        const mobileProfessionalYearlyButton = document.getElementById(
+          "mobile-professional-yearly-button"
+        );
+
+        let currentPlan = "professional"; // Default to professional
+
+        // Update mobile professional pricing based on billing cycle
+        function updateMobileProfessionalPricing() {
+          if (!mobileProfessionalPrice) return;
+
+          if (currentBilling === "yearly") {
+            mobileProfessionalPrice.textContent = "20";
+            if (mobileProfessionalBillingText) {
+              mobileProfessionalBillingText.textContent =
+                "per month (billed yearly)";
+            }
+            if (mobileSavingsMessage) {
+              mobileSavingsMessage.classList.remove("hidden");
+            }
+            if (mobileProfessionalMonthlyButton) {
+              mobileProfessionalMonthlyButton.classList.add("hidden");
+            }
+            if (mobileProfessionalYearlyButton) {
+              mobileProfessionalYearlyButton.classList.remove("hidden");
+            }
+          } else {
+            mobileProfessionalPrice.textContent = "25";
+            if (mobileProfessionalBillingText) {
+              mobileProfessionalBillingText.textContent = "per month";
+            }
+            if (mobileSavingsMessage) {
+              mobileSavingsMessage.classList.add("hidden");
+            }
+            if (mobileProfessionalMonthlyButton) {
+              mobileProfessionalMonthlyButton.classList.remove("hidden");
+            }
+            if (mobileProfessionalYearlyButton) {
+              mobileProfessionalYearlyButton.classList.add("hidden");
+            }
+          }
+        }
+
+        // Show plan card based on selection
+        function showPlanCard(plan) {
+          // Hide all cards
+          if (freePlanCard) freePlanCard.classList.add("hidden");
+          if (professionalPlanCard)
+            professionalPlanCard.classList.add("hidden");
+          if (customPlanCard) customPlanCard.classList.add("hidden");
+
+          // Show selected card
+          if (plan === "free" && freePlanCard) {
+            freePlanCard.classList.remove("hidden");
+          } else if (plan === "professional" && professionalPlanCard) {
+            professionalPlanCard.classList.remove("hidden");
+            updateMobileProfessionalPricing();
+          } else if (plan === "custom" && customPlanCard) {
+            customPlanCard.classList.remove("hidden");
+          }
+
+          currentPlan = plan;
+        }
+
+        // Update tab styles
+        function updateTabStyles(activeTab) {
+          if (!activeTab) return;
+
+          // Reset all tabs
+          [freeTab, professionalTab, customTab].forEach((tab) => {
+            if (tab) {
+              tab.classList.remove("bg-brand-600", "text-white");
+              tab.classList.add("bg-white", "text-gray-700");
+            }
+          });
+
+          // Style active tab
+          activeTab.classList.add("bg-brand-600", "text-white");
+          activeTab.classList.remove("bg-white", "text-gray-700");
+        }
+
+        // Tab click handlers
+        if (freeTab) {
+          freeTab.addEventListener("click", function () {
+            updateTabStyles(freeTab);
+            showPlanCard("free");
+          });
+        }
+
+        if (professionalTab) {
+          professionalTab.addEventListener("click", function () {
+            updateTabStyles(professionalTab);
+            showPlanCard("professional");
+          });
+        }
+
+        if (customTab) {
+          customTab.addEventListener("click", function () {
+            updateTabStyles(customTab);
+            showPlanCard("custom");
+          });
+        }
+
+        // Initialize - show professional plan by default and set tab style
+        if (professionalTab) {
+          updateTabStyles(professionalTab);
+          showPlanCard("professional");
+        }
+      });
+    </script>
+    
+</body>
+</html>

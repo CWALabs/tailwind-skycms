@@ -1,0 +1,56 @@
+/* Local fallback for CKEditor content styling used by sample pages. */
+.ck-content {
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+.ck-content h1,
+.ck-content h2,
+.ck-content h3,
+.ck-content h4,
+.ck-content h5,
+.ck-content h6 {
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1.25em 0 0.5em;
+}
+
+.ck-content p,
+.ck-content ul,
+.ck-content ol,
+.ck-content blockquote,
+.ck-content table {
+  margin: 0 0 1em;
+}
+
+.ck-content ul,
+.ck-content ol {
+  padding-left: 1.25rem;
+}
+
+.ck-content a {
+  text-decoration: underline;
+}
+
+.ck-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.ck-content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.ck-content th,
+.ck-content td {
+  border: 1px solid #d1d5db;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.ck-content blockquote {
+  border-left: 4px solid #d1d5db;
+  padding-left: 1rem;
+  color: #4b5563;
+}

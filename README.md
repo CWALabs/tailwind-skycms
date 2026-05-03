@@ -1,5 +1,7 @@
 # SkyCMS Tailwind CSS Build
 
+> Documentation: [Documentation Index](docs/index.md)
+
 [![Build Distribution](https://github.com/CWALabs/tailwind-skycms/actions/workflows/build.yml/badge.svg)](https://github.com/CWALabs/tailwind-skycms/actions/workflows/build.yml)
 
 This project contains the Tailwind CSS build setup for the SkyCMS website. It compiles Tailwind CSS into a ready-to-use CSS file and provides a self-hosted JavaScript runtime for dynamic styling.
@@ -257,9 +259,45 @@ This ensures Tailwind only includes the classes you actually use, keeping the fi
 ## 🔄 Documentation
 
 ### Project Documentation
-- **[CDN_USAGE.md](CDN_USAGE.md)** - Complete guide to using files via jsDelivr CDN
-- **[SKYCMS_BUILD_GUIDE.md](SKYCMS_BUILD_GUIDE.md)** - Detailed build process documentation
-- **[CDN_VS_BUILD_PROCESS.md](CDN_VS_BUILD_PROCESS.md)** - Understanding runtime vs compiled approaches
+- **[CDN_USAGE.md](docs/CDN_USAGE.md)** - Complete guide to using files via jsDelivr CDN
+- **[SKYCMS_BUILD_GUIDE.md](docs/SKYCMS_BUILD_GUIDE.md)** - Detailed build process documentation
+- **[CDN_VS_BUILD_PROCESS.md](docs/CDN_VS_BUILD_PROCESS.md)** - Understanding runtime vs compiled approaches
+
+### Sample Pages
+- **[about.html](samples/about.html)** - About page sample
+- **[complete-demo.html](samples/complete-demo.html)** - Full component demo page
+- **[features.html](samples/features.html)** - Features marketing page sample
+- **[pricing.html](samples/pricing.html)** - Pricing page sample
+- **[semantic-elements-demo.html](samples/semantic-elements-demo.html)** - Semantic HTML elements demo
+- **[sky-comparisons.html](samples/sky-comparisons.html)** - Competitive comparison page sample
+- **[skycms-template.html](samples/skycms-template.html)** - SkyCMS template integration sample
+- **[why-skycms.html](samples/why-skycms.html)** - Why SkyCMS marketing page sample
+
+### Previewing Sample Pages
+
+The sample pages reference local assets and compiled CSS, so they must be served over HTTP rather than opened directly as files. Use Node's `npx serve` — no installation required beyond the `npm install` you've already run:
+
+```bash
+npx serve .
+```
+
+This starts a local server at `http://localhost:3000` (or the next available port). Open any of the pages below in your browser:
+
+| Page | URL |
+|------|-----|
+| Homepage | `http://localhost:3000` |
+| Features | `http://localhost:3000/samples/features.html` |
+| Why SkyCMS | `http://localhost:3000/samples/why-skycms.html` |
+| Comparisons | `http://localhost:3000/samples/sky-comparisons.html` |
+| Pricing | `http://localhost:3000/samples/pricing.html` |
+| About | `http://localhost:3000/samples/about.html` |
+| Full Demo | `http://localhost:3000/samples/complete-demo.html` |
+| Template | `http://localhost:3000/samples/skycms-template.html` |
+
+Press `Ctrl+C` to stop the server when you're done.
+
+> **Tip:** Run `npm run build` first if you haven't already. The sample pages load CSS from `dist/tailwind.css`, which must exist before you preview.
+
 - *🤖 Automated Builds
 
 This project uses GitHub Actions to automatically:
@@ -284,7 +322,7 @@ The workflow runs automatically - no manual intervention needed!
 - **Solution:** Wait a few minutes for jsDelivr cache to update, or purge cache at https://www.jsdelivr.com/tools/purge
 
 **Issue:** Custom colors/fonts not included in CSS
-- **Solution:** Make sure you're using the classes in your HTML files. See [CDN_VS_BUILD_PROCESS.md](CDN_VS_BUILD_PROCESS.md) for details.
+- **Solution:** Make sure you're using the classes in your HTML files. See [CDN_VS_BUILD_PROCESS.md](docs/CDN_VS_BUILD_PROCESS.md) for details.
 
 ## 📝 License
 
